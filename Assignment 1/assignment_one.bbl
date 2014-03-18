@@ -1,0 +1,48 @@
+\begin{thebibliography}{1}
+
+\bibitem{albertsessential}
+B~Alberts, D~Bray, K~Hopkin, A~Johnson, J~Lewis, M~Raff, K~Roberts, and
+  P~Walter.
+\newblock Essential cell biology; garland science: New york, 2009.
+\newblock pages 427--452.
+
+\bibitem{condon2003problems}
+Anne Condon.
+\newblock Problems on rna secondary structure prediction and design.
+\newblock In {\em Automata, Languages and Programming}, pages 22--32. Springer,
+  2003.
+
+\bibitem{conn1998rna}
+Graeme~L Conn and David~E Draper.
+\newblock Rna structure.
+\newblock {\em Current opinion in structural biology}, 8(3):278--285, 1998.
+
+\bibitem{hofacker2008rna}
+Ivo~L Hofacker.
+\newblock Rna consensus structure prediction with rnaalifold.
+\newblock In {\em Comparative Genomics}, pages 527--543. Springer, 2008.
+
+\bibitem{nussinov1980fast}
+Ruth Nussinov and Ann~B Jacobson.
+\newblock Fast algorithm for predicting the secondary structure of
+  single-stranded rna.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  77(11):6309--6313, 1980.
+
+\bibitem{nussinov1978algorithms}
+Ruth Nussinov, George Pieczenik, Jerrold~R Griggs, and Daniel~J Kleitman.
+\newblock Algorithms for loop matchings.
+\newblock {\em SIAM Journal on Applied mathematics}, 35(1):68--82, 1978.
+
+\bibitem{tinoco1999rna}
+Ignacio Tinoco~Jr and Carlos Bustamante.
+\newblock How rna folds.
+\newblock {\em Journal of molecular biology}, 293(2):271--281, 1999.
+
+\bibitem{xu2012statistical}
+Zhenjiang Xu, Anthony Almudevar, and David~H Mathews.
+\newblock Statistical evaluation of improvement in rna secondary structure
+  prediction.
+\newblock {\em Nucleic acids research}, 40(4):e26--e26, 2012.
+
+\end{thebibliography}
