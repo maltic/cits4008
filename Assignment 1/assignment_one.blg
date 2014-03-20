@@ -5,45 +5,46 @@ The style file: plain.bst
 Database file #1: assignment_one.bib
 Warning--empty journal in albertsessential
 Warning--empty year in albertsessential
-You've used 8 entries,
+Warning--empty journal in nash2013new
+You've used 18 entries,
             2118 wiz_defined-function locations,
-            553 strings with 5261 characters,
-and the built_in function-call counts, 3210 in all, are:
-= -- 331
-> -- 137
-< -- 3
-+ -- 54
-- -- 46
-* -- 236
-:= -- 512
-add.period$ -- 26
-call.type$ -- 8
-change.case$ -- 47
+            617 strings with 6898 characters,
+and the built_in function-call counts, 6702 in all, are:
+= -- 681
+> -- 305
+< -- 4
++ -- 121
+- -- 102
+* -- 503
+:= -- 1099
+add.period$ -- 57
+call.type$ -- 18
+change.case$ -- 104
 chr.to.int$ -- 0
-cite$ -- 10
-duplicate$ -- 121
-empty$ -- 247
-format.name$ -- 46
-if$ -- 679
+cite$ -- 21
+duplicate$ -- 243
+empty$ -- 511
+format.name$ -- 102
+if$ -- 1393
 int.to.chr$ -- 0
-int.to.str$ -- 8
-missing$ -- 8
-newline$ -- 43
-num.names$ -- 16
-pop$ -- 47
+int.to.str$ -- 18
+missing$ -- 18
+newline$ -- 93
+num.names$ -- 36
+pop$ -- 93
 preamble$ -- 1
-purify$ -- 39
+purify$ -- 86
 quote$ -- 0
-skip$ -- 89
+skip$ -- 175
 stack$ -- 0
-substring$ -- 253
-swap$ -- 32
-text.length$ -- 3
+substring$ -- 498
+swap$ -- 50
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 32
-warning$ -- 2
-while$ -- 35
-width$ -- 9
-write$ -- 90
-(There were 2 warnings)
+type$ -- 72
+warning$ -- 3
+while$ -- 72
+width$ -- 20
+write$ -- 199
+(There were 3 warnings)

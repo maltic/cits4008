@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.17)  18 MAR 2014 13:48
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.17)  20 MAR 2014 15:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -152,50 +152,53 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 82.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 82.
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no ˜ in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no ™ in font cmr12!
- [2 <./figure1.png>]
+ [2 <./figure1.png>] <circle2graph.png, id=18, 1284.8pt x 963.6pt>
+File: circle2graph.png Graphic file (type png)
+ <use circle2graph.png>
+Package pdftex.def Info: circle2graph.png used on input line 111.
+(pdftex.def)             Requested size: 1284.79688pt x 963.59766pt.
+
+<interval2circle.png, id=19, 1284.8pt x 963.6pt>
+File: interval2circle.png Graphic file (type png)
+ <use interval2circle.png>
+Package pdftex.def Info: interval2circle.png used on input line 122.
+(pdftex.def)             Requested size: 1284.79688pt x 963.59766pt.
+
+[3 <./circle2graph.png>]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
 
-Overfull \hbox (18.86803pt too wide) in paragraph at lines 115--116
+Overfull \hbox (18.86803pt too wide) in paragraph at lines 132--133
 []\OT1/cmr/m/n/12 Interestingly, the RNA fold-ing al-go-rithm first pre-sented 
 by Nussi-nov finds the maximum-
  []
 
-[3]
+[4 <./interval2circle.png>]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no ™ in font cmr12!
- (./assignment_one.bbl [4]) [5] (./assignment_one.aux) ) 
+ (./assignment_one.bbl [5]) [6]
+(./assignment_one.aux) ) 
 Here is how much of TeX's memory you used:
- 1511 strings out of 495059
- 21588 string characters out of 3182030
- 77375 words of memory out of 3000000
- 4700 multiletter control sequences out of 15000+200000
+ 1534 strings out of 495059
+ 22023 string characters out of 3182030
+ 76430 words of memory out of 3000000
+ 4721 multiletter control sequences out of 15000+200000
  8541 words of font info for 30 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  37i,6n,23p,1035b,259s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mti12.pfb>
-Output written on assignment_one.pdf (5 pages, 225019 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on assignment_one.pdf (6 pages, 293677 bytes).
 PDF statistics:
- 51 PDF objects out of 1000 (max. 8388607)
- 34 compressed objects within 1 object stream
+ 58 PDF objects out of 1000 (max. 8388607)
+ 36 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
