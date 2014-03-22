@@ -50,6 +50,12 @@ Ivo~L Hofacker.
 \newblock Rna consensus structure prediction with rnaalifold.
 \newblock In {\em Comparative Genomics}, pages 527--543. Springer, 2008.
 
+\bibitem{li2013multicore}
+Junjie Li, Sanjay Ranka, and Sartaj Sahni.
+\newblock Multicore and gpu algorithms for nussinov rna folding.
+\newblock In {\em Computational Advances in Bio and Medical Sciences (ICCABS),
+  2013 IEEE 3rd International Conference on}, pages 1--2. IEEE, 2013.
+
 \bibitem{lorenz2011viennarna}
 Ronny Lorenz, Stephan~HF Bernhart, Christian~Hoener Zu~Siederdissen, Hakim
   Tafer, Christoph Flamm, Peter~F Stadler, Ivo~L Hofacker, et~al.

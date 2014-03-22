@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.17)  20 MAR 2014 15:58
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.17)  22 MAR 2014 22:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -168,34 +168,28 @@ Package pdftex.def Info: interval2circle.png used on input line 122.
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
-
-Overfull \hbox (18.86803pt too wide) in paragraph at lines 132--133
-[]\OT1/cmr/m/n/12 Interestingly, the RNA fold-ing al-go-rithm first pre-sented 
-by Nussi-nov finds the maximum-
- []
-
-[4 <./interval2circle.png>]
+ [4 <./interval2circle.png>]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
- (./assignment_one.bbl [5]) [6]
-(./assignment_one.aux) ) 
+ (./assignment_one.bbl
+[5]) [6] (./assignment_one.aux) ) 
 Here is how much of TeX's memory you used:
- 1534 strings out of 495059
- 22023 string characters out of 3182030
- 76430 words of memory out of 3000000
- 4721 multiletter control sequences out of 15000+200000
+ 1535 strings out of 495059
+ 22040 string characters out of 3182030
+ 76434 words of memory out of 3000000
+ 4722 multiletter control sequences out of 15000+200000
  8541 words of font info for 30 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 37i,6n,23p,1035b,259s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on assignment_one.pdf (6 pages, 293677 bytes).
+ 37i,6n,23p,1020b,259s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on assignment_one.pdf (6 pages, 295265 bytes).
 PDF statistics:
  58 PDF objects out of 1000 (max. 8388607)
  36 compressed objects within 1 object stream
