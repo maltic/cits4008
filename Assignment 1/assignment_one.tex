@@ -32,7 +32,12 @@
 \begin{document}
 \maketitle
 
-\section*{RNA and DNA} DNA is a double helix molecule that codes for proteins used by cells \cite{albertsessential}. This
+\begin{abstract}
+RNA is the messenger molecule for DNA. It also plays a vital role in cellular metabolism. As a result, it is valuable to predict the secondary structure of RNA molecules. I have found that RNA folding problem is equivalent to finding the maximum weight independent set of a circle graph. In addition the Nussinov algorithm, which is used to fold RNA, can be used to solve the maximum weight independent set problem, and is competitive with similar algorithms.
+\end{abstract}
+
+\section*{RNA and DNA} 
+DNA is a double helix molecule that codes for proteins used by cells \cite{albertsessential}. This
 code, which can be thought of as the `digital' representation for the `analogue'
 protein used by our cells, must be carried to ribosomes which translate it into
 protein \cite{albertsessential}. This is a task carried out by Ribonucleic Acid (RNA). RNA is much like DNA as its chemical structure is similarly composed of Guanine, Adenine, and Cytosine. The fundamental difference, however, is that it is single stranded in structure, and has Uracil in place of Thymine \cite{albertsessential}.
@@ -52,7 +57,7 @@ and tertiary structures can be treated hierarchically. As a result, it is possib
 predict the secondary structure of an RNA without understanding the tertiary
 structure \cite{tinoco1999rna}. This report focuses on secondary structure prediction.
 
-\section*{Nussinov's Algorithm} The first RNA secondary structure prediction algorithms were relatively naive brute force searches in which all possible secondary structures were enumerated and the one with
+\section*{The Nussinov Algorithm} The first RNA secondary structure prediction algorithms were relatively naive brute force searches in which all possible secondary structures were enumerated and the one with
 the most bonds was selected as the solution \cite{nussinov1978algorithms}. While being very simplistic,
 these initial techniques introduce an important assumption: RNA molecules will
 form energetically stable secondary structures. Maximising bonds is a crude but
@@ -67,7 +72,7 @@ single structure with the maximal number of bonds using dynamic programming. Thi
 \scalebox{0.3}{\includegraphics{figure1}}
 \end{center}
 \caption{RNA secondary structure as described in the Nussinov algorithm.
-Taken from a subsequent publication \cite{nussinov1980fast}.}
+Taken from a publication by Nussinov \& Jacobson \cite{nussinov1980fast}.}
 \label{figure1}
 \end{figure}
 
@@ -104,7 +109,7 @@ with a linear time recurrence relation.
 
 \section*{Circle Graphs and RNA}
 A circle graph represents the intersection of a set of chords contained inside a circle.
-A pair of chords $i, j$ and $k, l$ can be described in three ways. The pair is said to overlap if $i \leq k \leq j \leq l$. A chord $i, j$ is said to contain $k, l$ if $i < k < l < j$. Finally, the pair is said to be disjoint if the pair does not overlap, and if neither chord contains the other. A circle graph is obtained by transforming every chord into a node. Edges between nodes indicate overlapping chords (depicted in Figure \ref{circle2graph}). Such a graph can also be represented as a set of intervals on a line (depicted in Figure \ref{interval2circle}). This is geometrically equivalent to `cutting' the circle, and laying the line out in one dimension. Intuitively one can see that the potential bonds of an RNA molecule form such a graph. Indeed, circle graphs were used to depict RNA is Nussinov's original paper \cite{nussinov1980fast} (see Figure \ref{figure1}).
+A pair of chords $i, j$ and $k, l$ can be described in three ways. The pair is said to overlap if $i \leq k \leq j \leq l$. A chord $i, j$ is said to contain $k, l$ if $i < k < l < j$. Finally, the pair is said to be disjoint if the pair does not overlap, and if neither chord contains the other. A circle graph is obtained by transforming every chord into a node. Edges between nodes indicate overlapping chords (depicted in Figure \ref{circle2graph}). Such a graph can also be represented as a set of intervals on a line (depicted in Figure \ref{interval2circle}). This is geometrically equivalent to `cutting' the circle, and laying the line out in one dimension. Intuitively one can see that the potential bonds of an RNA molecule form such a graph. Indeed, circle graphs were used to depict RNA is Nussinov's original paper (see Figure \ref{figure1}) \cite{nussinov1980fast}.
 
 \begin{figure}
 \begin{center}
@@ -135,9 +140,9 @@ The RNA folding algorithm first presented by Nussinov finds the maximum-weight i
 \section*{Conclusion}
 It should be noted that the bound of $O(m + n^3)$ means that, when $a = n$ and $a^2 < m$ this algorithm is equivalent to that of Nash \& Gregg. And also that when $m \geq n^2$ it is more efficient than that of Bonsma \& Breuer. Furthermore it has better time complexity than Valentino's algorithm for any moderately dense graph, and is superior to the earlier algorithms which take $O(m^3)$ time, despite being first published in 1978, and it’s successor's current widespread use in bioinformatics to predict RNA secondary structure \cite{lorenz2011viennarna}. This is particularly surprising, since the maximum-weight independent set problem has often been concomitant with the use of RNA folding algorithms \cite{sperschneider2008knotseeker, bon2011tt2ne}.
 
-Furthermore, Li, Ranka and Sahni \cite{li2013multicore} implemented the Nussinov algorithm for the GPU. This was up to 1582 times as fast as the single threaded version. They also outlined efficient multi-core implementations for the CPU based on the same model.
+Li, Ranka and Sahni \cite{li2013multicore} implemented the Nussinov algorithm on the GPU. This was reportedly up to 1582 times as fast as the single threaded version. They also outlined efficient multi-core implementations for the CPU, based on the same model.
 
-For 25 year the Nussinov algorithm was the most optimal algorithm for finding the maximum weight independent set of a circle graph. Up until 2013 it was still the most optimal algorithm in some cases. In addition, excellent parallel implementations of the Nussinov are available. Despite this, it was never recognised as finding, or used for finding, the maximum weight independent set for a circle graph. This starkly illustrates the problems inherent to cliquing within Science. I conjecture that this situation would have been avoided with a more holistic approach to research. All knowledge is valuable; insular research has no place in the advancement of Science.
+For 25 year the Nussinov algorithm was the most optimal algorithm for finding the maximum weight independent set of a circle graph. Before 2013, it was still the most optimal algorithm in some cases. In addition, excellent parallel implementations of the Nussinov algorithm are available. Despite this, it was never recognised as finding, or used for finding, the maximum weight independent set for a circle graph. This starkly illustrates the problems inherent to cliquing within Science. I conjecture that this situation would have been avoided with a more holistic approach to research. All knowledge is valuable; insular research has no place in the advancement of Science.
 
 
 \bibliographystyle{plain}

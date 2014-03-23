@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.17)  22 MAR 2014 22:02
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.17)  23 MAR 2014 12:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -141,58 +141,59 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<figure1.png, id=9, 1155.31625pt x 659.46375pt>
+<figure1.png, id=11, 1155.31625pt x 659.46375pt>
 File: figure1.png Graphic file (type png)
  <use figure1.png>
-Package pdftex.def Info: figure1.png used on input line 67.
+Package pdftex.def Info: figure1.png used on input line 72.
 (pdftex.def)             Requested size: 1155.31345pt x 659.46213pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 82.
+(Font)              <12> on input line 87.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 82.
+(Font)              <8> on input line 87.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 82.
- [2 <./figure1.png>] <circle2graph.png, id=18, 1284.8pt x 963.6pt>
+(Font)              <6> on input line 87.
+ [2 <./figure1.png>] <circle2graph.png, id=19, 1190.4475pt x 672.5125pt>
 File: circle2graph.png Graphic file (type png)
- <use circle2graph.png>
-Package pdftex.def Info: circle2graph.png used on input line 111.
-(pdftex.def)             Requested size: 1284.79688pt x 963.59766pt.
 
-<interval2circle.png, id=19, 1284.8pt x 963.6pt>
+<use circle2graph.png>
+Package pdftex.def Info: circle2graph.png used on input line 116.
+(pdftex.def)             Requested size: 1190.4446pt x 672.51085pt.
+ <interval2circle.png, id=20, 1160.335pt x 564.1075pt>
 File: interval2circle.png Graphic file (type png)
- <use interval2circle.png>
-Package pdftex.def Info: interval2circle.png used on input line 122.
-(pdftex.def)             Requested size: 1284.79688pt x 963.59766pt.
 
-[3 <./circle2graph.png>]
+<use interval2circle.png>
+Package pdftex.def Info: interval2circle.png used on input line 127.
+(pdftex.def)             Requested size: 1160.33217pt x 564.10611pt.
+ [3 <./circle2graph.png>]
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ™ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
  [4 <./interval2circle.png>]
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no ™ in font cmr12!
- (./assignment_one.bbl
-[5]) [6] (./assignment_one.aux) ) 
+(./assignment_one.bbl [5]) [6] (./assignment_one.aux) ) 
 Here is how much of TeX's memory you used:
- 1535 strings out of 495059
- 22040 string characters out of 3182030
+ 1538 strings out of 495059
+ 22081 string characters out of 3182030
  76434 words of memory out of 3000000
- 4722 multiletter control sequences out of 15000+200000
- 8541 words of font info for 30 fonts, out of 3000000 for 9000
+ 4724 multiletter control sequences out of 15000+200000
+ 9149 words of font info for 32 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  37i,6n,23p,1020b,259s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on assignment_one.pdf (6 pages, 295265 bytes).
+</usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on assignment_one.pdf (6 pages, 315699 bytes).
 PDF statistics:
- 58 PDF objects out of 1000 (max. 8388607)
- 36 compressed objects within 1 object stream
+ 66 PDF objects out of 1000 (max. 8388607)
+ 42 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
