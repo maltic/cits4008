@@ -1,0 +1,222 @@
+
+
+%template setup, made it adhere to UWA standards
+\documentclass[12pt, a4paper]{article}
+\usepackage{graphicx}
+\setlength{\oddsidemargin}{0.5cm}
+\setlength{\evensidemargin}{0.5cm}
+\setlength{\topmargin}{-1.6cm}
+\setlength{\leftmargin}{0.5cm}
+\setlength{\rightmargin}{0.5cm}
+\setlength{\textheight}{24.00cm} 
+\setlength{\textwidth}{15.00cm}
+\parindent 0pt
+\parskip 5pt
+\pagestyle{plain}
+
+
+%meta info
+\title{CITS4008 Assignment 2}
+\author{Max Ward}
+%let the date get auto generated
+
+%author list formatter. not really needed here, but always nice to have
+\newcommand{\namelistlabel}[1]{\mbox{#1}\hfil}
+\newenvironment{namelist}[1]{%1
+\begin{list}{}
+    {
+        \let\makelabel\namelistlabel
+        \settowidth{\labelwidth}{#1}
+        \setlength{\leftmargin}{1.1\labelwidth}
+    }
+  }{%1
+\end{list}}
+
+
+%-------------------------------------------------------------------------
+
+\begin{document}
+
+%title first!
+\maketitle
+
+%was not sure if abstract was required
+%but it never hurts to have a quick skim reader friendly summary
+\begin{abstract}
+RNA is the messenger molecule for DNA. It also plays a vital role in cellular metabolism. As a result, it is valuable to predict the secondary structure of RNA molecules. I have found that the RNA folding problem is equivalent to finding the maximum-weight independent set of a circle graph. In addition the Nussinov algorithm, which is used to fold RNA, can be used to solve the maximum-weight independent set problem, and is competitive with similar algorithms.
+\end{abstract}
+
+%assignment is too small to require numbered sections, or chapters
+\section*{RNA and DNA} 
+DNA is a double helix molecule that codes for proteins used by cells \cite{albertsessential}. This
+code, which can be thought of as the `digital' representation for the `analogue'
+protein used by our cells, must be carried to ribosomes which translate it into
+protein \cite{albertsessential}. This is a task carried out by Ribonucleic Acid (RNA). RNA is much like DNA as its chemical structure is similarly composed of Guanine, Adenine, and Cytosine. The fundamental difference, however, is that it is single stranded in structure, and has Uracil in place of Thymine \cite{albertsessential}.
+
+Recent research has found myriad functions for RNA other than being the messenger molecule for DNA. For example, RNA can act as a catalyst for RNA
+splicing, peptide bond formation, and can alter the regulation of genes
+\cite{xu2012statistical}. Because of its inherently single stranded nature, RNA forms bonds with itself, folding into
+secondary and tertiary structures \cite{conn1998rna}.
+
+It is axiomatic that chemical structure is tantamount to biological function, and RNA is no exception. For this reason, there has and continues to be an intense
+interest in predicting the secondary and tertiary structure of RNA
+molecules. This is in part because it will elucidate the underlying principles of
+RNA structure formation and function \cite{conn1998rna}, but also because it will allow the
+detection and classification of unknown RNAs, and assist the design of new RNA based drugs \cite{condon2003problems}. The secondary structure of RNA
+is also highly conserved during evolution, indicating its importance \cite{hofacker2008rna}. Secondary
+and tertiary structures can be treated hierarchically. As a result, it is possible to
+predict the secondary structure of RNA without understanding the tertiary
+structure \cite{tinoco1999rna}. This report focuses on secondary structure prediction.
+
+\section*{The Nussinov Algorithm} 
+The first RNA secondary structure prediction algorithms were relatively naive brute-force searches in which all possible secondary structures were enumerated and the one with
+the most bonds was selected as the solution \cite{nussinov1978algorithms}. While being very simplistic,
+these initial techniques introduce an important assumption: RNA molecules will
+form energetically stable secondary structures. Maximising bonds is a crude but
+nonetheless accurate measure of energetic stability, as every bond increases the
+stability of a structure \cite{nussinov1978algorithms}. In the late 1970s, when the first large RNA molecules
+were being successfully sequenced, Nussinov et al. \cite{nussinov1978algorithms} introduced an algorithm
+based on loop matching for bonding pairs. Their algorithm was designed to find a
+single structure with the maximal number of bonds using dynamic programming. This is possible only with the restriction that all bonding pairs are nested, an assumption that is generally true for naturally occurring RNA.
+
+\begin{figure}
+\begin{center}
+%the image is quite large, needs to be scaled dwon
+\scalebox{0.3}{\includegraphics{figure1}}
+\end{center}
+\caption{RNA secondary structure as described in the Nussinov algorithm.
+Taken from a publication by Nussinov \& Jacobson \cite{nussinov1980fast}.}
+\label{nuss_rna}
+\end{figure}
+
+
+Because of its dynamic programming nature, this algorithm performs recursive decompositions of an RNA, and builds
+larger structures out of repeated substructures. A natural representation of this is
+depicted in Figure \ref{nuss_rna}. Part A of Figure \ref{nuss_rna} shows bonds as arcs across a circular
+graph. In it, we see the nested nature of the structures being explored by the
+Nussinov algorithm. Part B shows how these structures translate to actual RNAs,
+and how these appear in vivo.
+
+%you cant have several aligned equations in the same block
+%unless you install a special package
+%I have faked it here
+\begin{equation} \label{eq:nuss_eq}
+	M(i, j) = \max \left\lbrace A, B, C, D \right\rbrace 
+\end{equation}
+\[
+A = M(i, j-1)
+\]
+\[
+B = M(i+1, j)
+\]
+\[
+C = M(i+1, j-1) + W(i, j)
+\]
+\[
+D = \max \left\lbrace M(i, k) + M(k+1, j) \right\rbrace \: when \: i < k < j
+\]
+
+
+In the recurrence relation show in Equation \ref{eq:nuss_eq}, the first two cases ($A$ and $B$) find the score associated with not allowing the positions $i$ and $j$ to bond. The case $C$ conversely determines the score given that positions $i$ and $j$ are bonded. The final case $D$ computes the score associated with a bifurcation. A bifurcation here means decomposition of the RNA into two separate structures between. This implies a $O(N^3)$
+worst case time complexity and a $O(N^2)$ space complexity, as a $O(N^2)$ state space (all combinations of $i$ and $j$) is explored
+with a linear time recurrence relation.
+
+
+
+\section*{The Zuker Algorithm}
+Soon after the work of Nussinov \& Jacobson, Zuker \& Stiegler \cite{zuker1981optimal}
+described an altered version of the same algorithm which, instead of maximising
+base pair weights, minimized the free energy of the secondary structure. This was done
+by introducing a number of thermodynamic rules for canonical structures like
+hairpin loops, internal bulges, multiloops, unbonded base pairs, and stacked base
+pairs. The algorithm is similar to the Nussinov algorithm
+but adds another mutually recursive dynamic programming recurrence to inject
+a complex and relatively comprehensive energy system. The original energy system used is borrowed from the work of Studnicka et al. \cite{studnicka1978computer} who presented a
+complex but theoretically similar algorithm, albeit with
+much worse asymptotic and implementation complexities. 
+
+
+\begin{figure}
+\begin{center}
+\scalebox{0.27}{\includegraphics{figure4}}
+\end{center}
+\caption{Diagram of faces used in the Zuker algorithm. Taken from original
+publication \cite{zuker1981optimal}.}
+\label{zuk_struct}
+\end{figure}
+
+First I shall introduce some useful terminology which should clarify aspects of Zuker \& Stiegler’s
+algorithm. The bases of an RNA molecule can be thought of as vertices in a planar graph. Edges between such vertices are then represented as chords on a semicircular diagram (Figures \ref{nuss_rna} and \ref{zuk_struct}). These chords are not allowed to touch. A chord
+is admissible if it represents a chemically valid bond, and an
+admissible structure is a structure whose graph contains only admissible bonds.
+Thence, one can define a face of such a graph as any planar region bounded on all
+sides---either by chords, or the edge of the graph. The
+folding algorithm of Zuker \& Stiegler considers such faces as the basic contributing factor to a molecule's stability, unlike the algorithm of Nussinov \& Jacobson
+which considers only individual bonds.
+
+
+Let $E(F)$ represent the energy of a face $F$; impossible structures are given
+an energy value of infinity, for example hairpin loops with less than three bases in the
+intervening loop region. In addition let $V(i, j)$ be defined as the minimum free
+energy of all structures in which bases $i$ and $j$ are bonded, and let $W(i, j)$ represent
+the minimum free energy of all structures contained within bases $i$ and $j$ inclusive.
+Note that for $W(i, j)$ there may or may not be a bond between bases $i$ and $j$. Also,
+if $i$ and $j$ cannot bond then $V(i, j) = \infty $. Finally note that $FH(i, j)$ represents a
+hairpin loop structure from $i$ to $j$, and that $FL(i, j, i' , j' )$ is defined as the region
+bounded by the bonds $i, j$ and $i', j'$. Examples of these decompositions are shown
+diagrammatically in the right half of Figure \ref{zuk_struct}. The labelled regions show faces
+in a semicircular graph representing a strand of RNA. In the accompanying left
+half of the figure, the same RNA structure is shown as it would appear in a real
+RNA rather than in a purely diagrammatic depiction.
+
+\begin{equation} \label{eq:zuk_v1_eq}
+V(i, j) = \min \left\lbrace E1, E2, E3 \right\rbrace
+\end{equation}
+$$E1 = E(FH(i, j))$$
+$$E2 = \min \left\lbrace E(FL(i, j, i', j')) + V (i', j') \right\rbrace \: where \: i < i' < j' < j$$
+$$E3 = \min \left\lbrace W (i + 1, i') + W (i' + 1, j − 1) \right\rbrace \: where \: i + 1 < i' < j - 2$$
+
+
+As shown by the definition provided in Equation \ref{eq:zuk_v1_eq}, $V (i, j)$ is computed by minimizing
+three cases. The first case considers the bond between $i$ and $j$ closing off a hairpin
+loop (H in Figure \ref{zuk_struct}). The second accounts for situations in which $i$ and $j$ are bonded. This can result in a bulge (BU in Figure \ref{zuk_struct}), internal loop (I in Figure \ref{zuk_struct}), or the continuation of a stacking region with the
+interior bond $i',j'$ (S in Figure \ref{zuk_struct}). The third and final case considers bifurcations
+(BF in Figure \ref{zuk_struct}).
+
+\begin{equation} \label{eq:zuk_v1_eq2}
+W (i, j) = \min \left\lbrace W(i + 1, j), W(i, j - 1), V(i, j), E4 \right\rbrace
+\end{equation}
+$$
+E4 = \min \left\lbrace W (i, i') + W (i' + 1, j) \right\rbrace \: where \: i < i' < j - 1
+$$
+
+Equation \ref{eq:zuk_v1_eq2} is the recurrence for $W(i, j)$ as described by Zuker \& Stiegler.
+Again there are three cases. The first two cases $W (i + 1, j)$ and $W(i, j - 1)$
+should be thought of as a single case which consider situations in which there
+is no bond between $i$ and $j$. This is similar to cases $A$ and $B$ from the Nussinov algorithm (Equation \ref{eq:nuss_eq}). The final case considers taking the bond from
+$i$ to $j$. This final case allows for bifurcations in which two bonding pairs split
+the structure into two sections. The final minimum free energy of the best structure is defined by $W(1, n)$, where $n$ is the length of the RNA molecule. It should
+be noted that the free energy for small molecules (fewer than 6 nucleotides in length) can easily be
+precomputed, and forms the base case of the given recurrence relations. Because of
+its efficiency ($O(N^3)$ time and $O(N^2)$ space), robustness, and extensibility, this method is,
+even today, still the most popular available. The most widely used packages for RNA secondary structure prediction all contain implementations of the Zuker algorithm \cite{lorenz2011viennarna, reuter2010rnastructure}.
+
+
+\section*{Stochastic Context Free Grammars}
+
+
+\section*{Conclusion}
+It should be noted that the bound of $O(m + n^3)$ means that, when $a = n$ and $a^2 < m$, this algorithm is equivalent to that of Nash \& Gregg. Also, given $m \geq n^2$, it is more efficient than that of Bonsma \& Breuer. Furthermore it has better time complexity than Valentino's algorithm for any moderately dense graph. It is also superior to earlier algorithms which take $O(m^3)$ time. Despite this, the Nussinov algorithm was first published in 1978, and it's successor is currently widely used in bioinformatics to predict RNA secondary structures \cite{lorenz2011viennarna}. This is particularly surprising, since the maximum-weight independent set problem has often been concomitant with the use of RNA folding algorithms \cite{sperschneider2008knotseeker, bon2011tt2ne}.
+
+Li, Ranka and Sahni \cite{li2013multicore} implemented the Nussinov algorithm on the GPU. This was reportedly up to 1582 times faster than the single threaded version. They also outlined efficient multi-core implementations for the CPU, based on the same model.
+
+For 25 year the Nussinov algorithm was the most optimal algorithm for finding the maximum-weight independent set of a circle graph. Before 2013, it was still the most optimal algorithm in some cases. In addition, excellent parallel implementations of the Nussinov algorithm are available. Despite this, it was never recognised as finding, or used for finding, the maximum-weight independent set for a circle graph. This starkly illustrates the problems inherent to cliquing within science. I conjecture that this situation would have been avoided with a more holistic approach to research. All knowledge is valuable; insular research has no place in the advancement of science.
+
+
+%let bibtex do all the hard work
+\bibliographystyle{plain}
+\bibliography{assignment_two}
+
+
+\end{document}
+
