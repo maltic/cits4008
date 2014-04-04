@@ -33,9 +33,11 @@
 \end{list}}
 
 
+
 %-------------------------------------------------------------------------
 
 \begin{document}
+
 
 %title first!
 \maketitle
@@ -46,38 +48,27 @@
 RNA is the messenger molecule for DNA. It also plays a vital role in cellular metabolism. As a result, it is valuable to predict the secondary structure of RNA molecules. I have found that the RNA folding problem is equivalent to finding the maximum-weight independent set of a circle graph. In addition the Nussinov algorithm, which is used to fold RNA, can be used to solve the maximum-weight independent set problem, and is competitive with similar algorithms.
 \end{abstract}
 
-%assignment is too small to require numbered sections, or chapters
-\section*{RNA and DNA} 
-DNA is a double helix molecule that codes for proteins used by cells \cite{albertsessential}. This
-code, which can be thought of as the `digital' representation for the `analogue'
-protein used by our cells, must be carried to ribosomes which translate it into
-protein \cite{albertsessential}. This is a task carried out by Ribonucleic Acid (RNA). RNA is much like DNA as its chemical structure is similarly composed of Guanine, Adenine, and Cytosine. The fundamental difference, however, is that it is single stranded in structure, and has Uracil in place of Thymine \cite{albertsessential}.
+\tableofcontents
+\clearpage
 
-Recent research has found myriad functions for RNA other than being the messenger molecule for DNA. For example, RNA can act as a catalyst for RNA
-splicing, peptide bond formation, and can alter the regulation of genes
+%assignment is too small to require numbered sections, or chapters
+\section*{Introduction} 
+Ribonucleic Acid (RNA) is a biologically active molecule similar in structure to DNA. Recent research has found myriad functions for RNA. For example, RNA can act as a catalyst for mRNA splicing, peptide bond formation, and can alter the regulation of genes
 \cite{xu2012statistical}. Because of its inherently single stranded nature, RNA forms bonds with itself, folding into
 secondary and tertiary structures \cite{conn1998rna}.
 
 It is axiomatic that chemical structure is tantamount to biological function, and RNA is no exception. For this reason, there has and continues to be an intense
-interest in predicting the secondary and tertiary structure of RNA
-molecules. This is in part because it will elucidate the underlying principles of
-RNA structure formation and function \cite{conn1998rna}, but also because it will allow the
-detection and classification of unknown RNAs, and assist the design of new RNA based drugs \cite{condon2003problems}. The secondary structure of RNA
-is also highly conserved during evolution, indicating its importance \cite{hofacker2008rna}. Secondary
-and tertiary structures can be treated hierarchically. As a result, it is possible to
-predict the secondary structure of RNA without understanding the tertiary
-structure \cite{tinoco1999rna}. This report focuses on secondary structure prediction.
+interest in predicting the secondary structure of RNA
+molecules in silico. This is  because it will allow the detection and classification of unknown RNAs, and assist the design of new RNA based drugs \cite{condon2003problems}. The secondary structure of RNA
+is also highly conserved during evolution, indicating its importance \cite{hofacker2008rna}.
 
-\section*{The Nussinov Algorithm} 
-The first RNA secondary structure prediction algorithms were relatively naive brute-force searches in which all possible secondary structures were enumerated and the one with
-the most bonds was selected as the solution \cite{nussinov1978algorithms}. While being very simplistic,
-these initial techniques introduce an important assumption: RNA molecules will
-form energetically stable secondary structures. Maximising bonds is a crude but
-nonetheless accurate measure of energetic stability, as every bond increases the
+I endeavour to give the reader a brisk but incisive review of RNA secondary structure prediction algorithms in this paper. For the sake of succinctness, my focus shall be pseudoknot-free RNA prediction methods. Particularly those able to predict RNA structures ex nihilo---that is with no information other than the primary RNA sequence itself.
+
+\section{Dynamic Programming}
+\subsection{The Nussinov Algorithm}
+According to the thermodynamic hypothesis, biologically active molecules should form structures that have minimal free energy and thus maximum stability [ref]. For RNA molecules, maximising bonds is a crude but nonetheless accurate measure of energetic stability, as every bond increases the
 stability of a structure \cite{nussinov1978algorithms}. In the late 1970s, when the first large RNA molecules
-were being successfully sequenced, Nussinov et al. \cite{nussinov1978algorithms} introduced an algorithm
-based on loop matching for bonding pairs. Their algorithm was designed to find a
-single structure with the maximal number of bonds using dynamic programming. This is possible only with the restriction that all bonding pairs are nested, an assumption that is generally true for naturally occurring RNA.
+were being successfully sequenced, Nussinov et al. \cite{nussinov1978algorithms} introduced an algorithm to find a single structure with the maximal number of bonds using dynamic programming. This is possible only with the restriction that all bonding pairs are nested, and hence contains no pseudoknots.
 
 \begin{figure}
 \begin{center}
@@ -90,10 +81,10 @@ Taken from a publication by Nussinov \& Jacobson \cite{nussinov1980fast}.}
 \end{figure}
 
 
-Because of its dynamic programming nature, this algorithm performs recursive decompositions of an RNA, and builds
+Because of its dynamic programming nature, this algorithm performs recursive decompositions of an RNA and builds
 larger structures out of repeated substructures. A natural representation of this is
 depicted in Figure \ref{nuss_rna}. Part A of Figure \ref{nuss_rna} shows bonds as arcs across a circular
-graph. In it, we see the nested nature of the structures being explored by the
+graph. Once can also see the nested nature of the structures being explored by the
 Nussinov algorithm. Part B shows how these structures translate to actual RNAs,
 and how these appear in vivo.
 
@@ -117,13 +108,10 @@ D = \max \left\lbrace M(i, k) + M(k+1, j) \right\rbrace \: when \: i < k < j
 \]
 
 
-In the recurrence relation show in Equation \ref{eq:nuss_eq}, the first two cases ($A$ and $B$) find the score associated with not allowing the positions $i$ and $j$ to bond. The case $C$ conversely determines the score given that positions $i$ and $j$ are bonded. The final case $D$ computes the score associated with a bifurcation. A bifurcation here means decomposition of the RNA into two separate structures between. This implies a $O(N^3)$
-worst case time complexity and a $O(N^2)$ space complexity, as a $O(N^2)$ state space (all combinations of $i$ and $j$) is explored
-with a linear time recurrence relation.
+Equation \ref{eq:nuss_eq} describes the recurrence relation for the Nussinov algorithm. The first two cases ($A$ and $B$) find the score associated with not allowing the positions $i$ and $j$ to bond. The case $C$ conversely determines the score given that positions $i$ and $j$ are bonded. The final case $D$ computes the score associated with a bifurcation. A bifurcation here means decomposition of the RNA into two separate structures.
 
 
-
-\section*{The Zuker Algorithm}
+\subsection{The Zuker Algorithm}
 Soon after the work of Nussinov \& Jacobson, Zuker \& Stiegler \cite{zuker1981optimal}
 described an altered version of the same algorithm which, instead of maximising
 base pair weights, minimized the free energy of the secondary structure. This was done
@@ -202,15 +190,17 @@ its efficiency ($O(N^3)$ time and $O(N^2)$ space), robustness, and extensibility
 even today, still the most popular available. The most widely used packages for RNA secondary structure prediction all contain implementations of the Zuker algorithm \cite{lorenz2011viennarna, reuter2010rnastructure}.
 
 
-\section*{Stochastic Context Free Grammars}
+\subsubsection{Thermodynamic Model Improvements}
+\subsection{Parallel Implementations}
+
+\section{Stochastic Context Free Grammars}
+\section{Unification and Comparison}
+
+\section{Conclusion}
 
 
-\section*{Conclusion}
-It should be noted that the bound of $O(m + n^3)$ means that, when $a = n$ and $a^2 < m$, this algorithm is equivalent to that of Nash \& Gregg. Also, given $m \geq n^2$, it is more efficient than that of Bonsma \& Breuer. Furthermore it has better time complexity than Valentino's algorithm for any moderately dense graph. It is also superior to earlier algorithms which take $O(m^3)$ time. Despite this, the Nussinov algorithm was first published in 1978, and it's successor is currently widely used in bioinformatics to predict RNA secondary structures \cite{lorenz2011viennarna}. This is particularly surprising, since the maximum-weight independent set problem has often been concomitant with the use of RNA folding algorithms \cite{sperschneider2008knotseeker, bon2011tt2ne}.
 
-Li, Ranka and Sahni \cite{li2013multicore} implemented the Nussinov algorithm on the GPU. This was reportedly up to 1582 times faster than the single threaded version. They also outlined efficient multi-core implementations for the CPU, based on the same model.
 
-For 25 year the Nussinov algorithm was the most optimal algorithm for finding the maximum-weight independent set of a circle graph. Before 2013, it was still the most optimal algorithm in some cases. In addition, excellent parallel implementations of the Nussinov algorithm are available. Despite this, it was never recognised as finding, or used for finding, the maximum-weight independent set for a circle graph. This starkly illustrates the problems inherent to cliquing within science. I conjecture that this situation would have been avoided with a more holistic approach to research. All knowledge is valuable; insular research has no place in the advancement of science.
 
 
 %let bibtex do all the hard work
