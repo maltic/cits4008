@@ -1,71 +1,26 @@
 \begin{thebibliography}{10}
 
-\bibitem{albertsessential}
-B~Alberts, D~Bray, K~Hopkin, A~Johnson, J~Lewis, M~Raff, K~Roberts, and
-  P~Walter.
-\newblock Essential cell biology; garland science: New york, 2009.
-\newblock pages 427--452.
-
-\bibitem{bon2011tt2ne}
-Micha{\"e}l Bon and Henri Orland.
-\newblock Tt2ne: a novel algorithm to predict rna secondary structures with
-  pseudoknots.
-\newblock {\em Nucleic acids research}, 39(14):e93--e93, 2011.
-
-\bibitem{bonsma2012counting}
-Paul Bonsma and Felix Breuer.
-\newblock Counting hexagonal patches and independent sets in circle graphs.
-\newblock {\em Algorithmica}, 63(3):645--671, 2012.
-
 \bibitem{condon2003problems}
 Anne Condon.
 \newblock Problems on rna secondary structure prediction and design.
 \newblock In {\em Automata, Languages and Programming}, pages 22--32. Springer,
   2003.
 
-\bibitem{cong1990over}
-Jason Cong and CL~Liu.
-\newblock Over-the-cell channel routing.
-\newblock {\em Computer-Aided Design of Integrated Circuits and Systems, IEEE
-  Transactions on}, 9(4):408--418, 1990.
-
 \bibitem{conn1998rna}
 Graeme~L Conn and David~E Draper.
 \newblock Rna structure.
 \newblock {\em Current opinion in structural biology}, 8(3):278--285, 1998.
-
-\bibitem{de1999graph}
-Dominique de~Werra, Ch~Eisenbeis, Sylvain Lelait, and Bruno Marmol.
-\newblock On a graph-theoretical model for cyclic register allocation.
-\newblock {\em Discrete Applied Mathematics}, 93(2):191--203, 1999.
-
-\bibitem{gavril1973algorithms}
-Fanica Gavril.
-\newblock Algorithms for a maximum clique and a maximum independent set of a
-  circle graph.
-\newblock {\em Networks}, 3(3):261--273, 1973.
 
 \bibitem{hofacker2008rna}
 Ivo~L Hofacker.
 \newblock Rna consensus structure prediction with rnaalifold.
 \newblock In {\em Comparative Genomics}, pages 527--543. Springer, 2008.
 
-\bibitem{li2013multicore}
-Junjie Li, Sanjay Ranka, and Sartaj Sahni.
-\newblock Multicore and gpu algorithms for nussinov rna folding.
-\newblock In {\em Computational Advances in Bio and Medical Sciences (ICCABS),
-  2013 IEEE 3rd International Conference on}, pages 1--2. IEEE, 2013.
-
 \bibitem{lorenz2011viennarna}
 Ronny Lorenz, Stephan~HF Bernhart, Christian~Hoener Zu~Siederdissen, Hakim
   Tafer, Christoph Flamm, Peter~F Stadler, Ivo~L Hofacker, et~al.
 \newblock Viennarna package 2.0.
 \newblock {\em Algorithms for Molecular Biology}, 6(1):26, 2011.
-
-\bibitem{nash2013new}
-Nicholas Nash and David Gregg.
-\newblock New algorithms for maximum independent sets of circle graphs.
-\newblock 2013.
 
 \bibitem{nussinov1980fast}
 Ruth Nussinov and Ann~B Jacobson.
@@ -79,31 +34,28 @@ Ruth Nussinov, George Pieczenik, Jerrold~R Griggs, and Daniel~J Kleitman.
 \newblock Algorithms for loop matchings.
 \newblock {\em SIAM Journal on Applied mathematics}, 35(1):68--82, 1978.
 
-\bibitem{sperschneider2008knotseeker}
-Jana Sperschneider and Amitava Datta.
-\newblock Knotseeker: Heuristic pseudoknot detection in long rna sequences.
-\newblock {\em RNA}, 14(4):630--640, 2008.
+\bibitem{reuter2010rnastructure}
+Jessica~S Reuter and David~H Mathews.
+\newblock Rnastructure: software for rna secondary structure prediction and
+  analysis.
+\newblock {\em BMC bioinformatics}, 11(1):129, 2010.
 
-\bibitem{swenson2009maximum}
-Krister~M Swenson, Yokuki To, Jijun Tang, and Bernard~ME Moret.
-\newblock Maximum independent sets of commuting and noninterfering inversions.
-\newblock {\em BMC bioinformatics}, 10(Suppl 1):S6, 2009.
-
-\bibitem{tinoco1999rna}
-Ignacio Tinoco~Jr and Carlos Bustamante.
-\newblock How rna folds.
-\newblock {\em Journal of molecular biology}, 293(2):271--281, 1999.
-
-\bibitem{valiente2003new}
-Gabriel Valiente.
-\newblock A new simple algorithm for the maximum-weight independent set problem
-  on circle graphs.
-\newblock In {\em Algorithms and Computation}, pages 129--137. Springer, 2003.
+\bibitem{studnicka1978computer}
+Gary~M Studnicka, Georgia~M Rahn, Ian~W Cummings, and Winston~A Salser.
+\newblock Computer method for predicting the secondary structure of
+  single-stranded rna.
+\newblock {\em Nucleic acids research}, 5(9):3365--3388, 1978.
 
 \bibitem{xu2012statistical}
 Zhenjiang Xu, Anthony Almudevar, and David~H Mathews.
 \newblock Statistical evaluation of improvement in rna secondary structure
   prediction.
 \newblock {\em Nucleic acids research}, 40(4):e26--e26, 2012.
+
+\bibitem{zuker1981optimal}
+Michael Zuker and Patrick Stiegler.
+\newblock Optimal computer folding of large rna sequences using thermodynamics
+  and auxiliary information.
+\newblock {\em Nucleic acids research}, 9(1):133--148, 1981.
 
 \end{thebibliography}

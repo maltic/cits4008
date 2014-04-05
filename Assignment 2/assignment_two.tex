@@ -3,6 +3,7 @@
 %template setup, made it adhere to UWA standards
 \documentclass[12pt, a4paper]{article}
 \usepackage{graphicx}
+\usepackage{amsmath}
 \setlength{\oddsidemargin}{0.5cm}
 \setlength{\evensidemargin}{0.5cm}
 \setlength{\topmargin}{-1.6cm}
@@ -91,8 +92,9 @@ and how these appear in vivo.
 %you cant have several aligned equations in the same block
 %unless you install a special package
 %I have faked it here
+
 \begin{equation} \label{eq:nuss_eq}
-	M(i, j) = \max \left\lbrace A, B, C, D \right\rbrace 
+	M(i, j) = \max \left\lbrace A, B, C, D \right\rbrace
 \end{equation}
 \[
 A = M(i, j-1)
@@ -114,14 +116,12 @@ Equation \ref{eq:nuss_eq} describes the recurrence relation for the Nussinov alg
 \subsection{The Zuker Algorithm}
 Soon after the work of Nussinov \& Jacobson, Zuker \& Stiegler \cite{zuker1981optimal}
 described an altered version of the same algorithm which, instead of maximising
-base pair weights, minimized the free energy of the secondary structure. This was done
+base pair weights, minimized free energy. This was done
 by introducing a number of thermodynamic rules for canonical structures like
 hairpin loops, internal bulges, multiloops, unbonded base pairs, and stacked base
 pairs. The algorithm is similar to the Nussinov algorithm
-but adds another mutually recursive dynamic programming recurrence to inject
-a complex and relatively comprehensive energy system. The original energy system used is borrowed from the work of Studnicka et al. \cite{studnicka1978computer} who presented a
-complex but theoretically similar algorithm, albeit with
-much worse asymptotic and implementation complexities. 
+but requires another mutually recursive dynamic programming recurrence to inject
+a complex and relatively comprehensive thermodynamic scoring system.
 
 
 \begin{figure}
@@ -134,7 +134,7 @@ publication \cite{zuker1981optimal}.}
 \end{figure}
 
 First I shall introduce some useful terminology which should clarify aspects of Zuker \& Stiegler’s
-algorithm. The bases of an RNA molecule can be thought of as vertices in a planar graph. Edges between such vertices are then represented as chords on a semicircular diagram (Figures \ref{nuss_rna} and \ref{zuk_struct}). These chords are not allowed to touch. A chord
+algorithm. The bases of an RNA molecule can be thought of as vertices in a planar graph. Edges between such vertices are then represented as chords on a semicircular diagram (see Figures \ref{nuss_rna} and \ref{zuk_struct}). These chords are not allowed to touch. A chord
 is admissible if it represents a chemically valid bond, and an
 admissible structure is a structure whose graph contains only admissible bonds.
 Thence, one can define a face of such a graph as any planar region bounded on all
@@ -143,29 +143,25 @@ folding algorithm of Zuker \& Stiegler considers such faces as the basic contrib
 which considers only individual bonds.
 
 
-Let $E(F)$ represent the energy of a face $F$; impossible structures are given
-an energy value of infinity, for example hairpin loops with less than three bases in the
-intervening loop region. In addition let $V(i, j)$ be defined as the minimum free
+Let $E(F)$ represent the energy of a face $F$; inadmissible structures are given
+an energy value of infinity. In addition let $V(i, j)$ be defined as the minimum free
 energy of all structures in which bases $i$ and $j$ are bonded, and let $W(i, j)$ represent
 the minimum free energy of all structures contained within bases $i$ and $j$ inclusive.
-Note that for $W(i, j)$ there may or may not be a bond between bases $i$ and $j$. Also,
-if $i$ and $j$ cannot bond then $V(i, j) = \infty $. Finally note that $FH(i, j)$ represents a
-hairpin loop structure from $i$ to $j$, and that $FL(i, j, i' , j' )$ is defined as the region
+Note that for $W(i, j)$ the bases at $i$ and $j$ need not be bonded. Alternatively if $i$ and $j$ cannot bond, then $V(i, j) = \infty $. Finally note that $FH(i, j)$ represents a
+hairpin loop from $i$ to $j$, and that $FL(i, j, i' , j' )$ is defined as the region
 bounded by the bonds $i, j$ and $i', j'$. Examples of these decompositions are shown
-diagrammatically in the right half of Figure \ref{zuk_struct}. The labelled regions show faces
-in a semicircular graph representing a strand of RNA. In the accompanying left
-half of the figure, the same RNA structure is shown as it would appear in a real
-RNA rather than in a purely diagrammatic depiction.
+diagrammatically in the right half of Figure \ref{zuk_struct}. In the accompanying left
+half the same RNA structure is shown as it would appear in vivo.
 
 \begin{equation} \label{eq:zuk_v1_eq}
 V(i, j) = \min \left\lbrace E1, E2, E3 \right\rbrace
 \end{equation}
 $$E1 = E(FH(i, j))$$
 $$E2 = \min \left\lbrace E(FL(i, j, i', j')) + V (i', j') \right\rbrace \: where \: i < i' < j' < j$$
-$$E3 = \min \left\lbrace W (i + 1, i') + W (i' + 1, j − 1) \right\rbrace \: where \: i + 1 < i' < j - 2$$
+$$E3 = \min \left\lbrace W (i + 1, i') + W (i' + 1, j - 1) \right\rbrace \: where \: i + 1 < i' < j - 2$$
 
 
-As shown by the definition provided in Equation \ref{eq:zuk_v1_eq}, $V (i, j)$ is computed by minimizing
+As defined in Equation \ref{eq:zuk_v1_eq}, $V (i, j)$ is computed by minimizing
 three cases. The first case considers the bond between $i$ and $j$ closing off a hairpin
 loop (H in Figure \ref{zuk_struct}). The second accounts for situations in which $i$ and $j$ are bonded. This can result in a bulge (BU in Figure \ref{zuk_struct}), internal loop (I in Figure \ref{zuk_struct}), or the continuation of a stacking region with the
 interior bond $i',j'$ (S in Figure \ref{zuk_struct}). The third and final case considers bifurcations
@@ -179,11 +175,9 @@ E4 = \min \left\lbrace W (i, i') + W (i' + 1, j) \right\rbrace \: where \: i < i
 $$
 
 Equation \ref{eq:zuk_v1_eq2} is the recurrence for $W(i, j)$ as described by Zuker \& Stiegler.
-Again there are three cases. The first two cases $W (i + 1, j)$ and $W(i, j - 1)$
-should be thought of as a single case which consider situations in which there
-is no bond between $i$ and $j$. This is similar to cases $A$ and $B$ from the Nussinov algorithm (Equation \ref{eq:nuss_eq}). The final case considers taking the bond from
-$i$ to $j$. This final case allows for bifurcations in which two bonding pairs split
-the structure into two sections. The final minimum free energy of the best structure is defined by $W(1, n)$, where $n$ is the length of the RNA molecule. It should
+Again there are three cases. The first two cases $W (i + 1, j)$ and $W(i, j - 1)$ are conceptually a single case in which there is no bond between $i$ and $j$. This is similar to cases $A$ and $B$ from the Nussinov algorithm (Equation \ref{eq:nuss_eq}). The second case considers taking the bond from
+$i$ to $j$. The final case allows for bifurcations in which two bonding pairs split
+the structure into two sections. The minimum free energy of the best structure is defined by $W(1, n)$, where $n$ is the length of the RNA molecule. It should
 be noted that the free energy for small molecules (fewer than 6 nucleotides in length) can easily be
 precomputed, and forms the base case of the given recurrence relations. Because of
 its efficiency ($O(N^3)$ time and $O(N^2)$ space), robustness, and extensibility, this method is,
@@ -191,7 +185,6 @@ even today, still the most popular available. The most widely used packages for 
 
 
 \subsubsection{Thermodynamic Model Improvements}
-\subsection{Parallel Implementations}
 
 \section{Stochastic Context Free Grammars}
 \section{Unification and Comparison}

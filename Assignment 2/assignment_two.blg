@@ -3,48 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: assignment_two.aux
 The style file: plain.bst
 Database file #1: assignment_two.bib
-Warning--empty journal in albertsessential
-Warning--empty year in albertsessential
-Warning--empty journal in nash2013new
-You've used 19 entries,
+You've used 10 entries,
             2118 wiz_defined-function locations,
-            622 strings with 7118 characters,
-and the built_in function-call counts, 7122 in all, are:
-= -- 725
-> -- 323
-< -- 5
-+ -- 128
-- -- 108
-* -- 529
-:= -- 1163
-add.period$ -- 61
-call.type$ -- 19
-change.case$ -- 110
+            567 strings with 5737 characters,
+and the built_in function-call counts, 3757 in all, are:
+= -- 380
+> -- 173
+< -- 2
++ -- 68
+- -- 58
+* -- 288
+:= -- 623
+add.period$ -- 32
+call.type$ -- 10
+change.case$ -- 58
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 262
-empty$ -- 546
-format.name$ -- 108
-if$ -- 1489
+cite$ -- 10
+duplicate$ -- 134
+empty$ -- 289
+format.name$ -- 58
+if$ -- 780
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 19
-newline$ -- 98
-num.names$ -- 38
-pop$ -- 102
+int.to.str$ -- 10
+missing$ -- 10
+newline$ -- 53
+num.names$ -- 20
+pop$ -- 48
 preamble$ -- 1
-purify$ -- 91
+purify$ -- 48
 quote$ -- 0
-skip$ -- 187
+skip$ -- 93
 stack$ -- 0
-substring$ -- 519
-swap$ -- 57
-text.length$ -- 5
+substring$ -- 277
+swap$ -- 26
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 76
-warning$ -- 3
-while$ -- 77
-width$ -- 21
-write$ -- 211
-(There were 3 warnings)
+type$ -- 40
+warning$ -- 0
+while$ -- 40
+width$ -- 12
+write$ -- 114
