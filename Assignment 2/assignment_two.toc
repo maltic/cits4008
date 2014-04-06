@@ -1,7 +1,6 @@
 \contentsline {section}{\numberline {1}Dynamic Programming}{2}
 \contentsline {subsection}{\numberline {1.1}The Nussinov Algorithm}{2}
 \contentsline {subsection}{\numberline {1.2}The Zuker Algorithm}{3}
-\contentsline {subsubsection}{\numberline {1.2.1}Thermodynamic Model Improvements}{5}
 \contentsline {section}{\numberline {2}Stochastic Context Free Grammars}{5}
-\contentsline {section}{\numberline {3}Unification and Comparison}{5}
-\contentsline {section}{\numberline {4}Conclusion}{5}
+\contentsline {subsection}{\numberline {2.1}Unification of Techniques}{5}
+\contentsline {section}{\numberline {3}Conclusion}{6}

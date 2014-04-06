@@ -1,5 +1,10 @@
 \begin{thebibliography}{10}
 
+\bibitem{anfinsen1973principles}
+CB~Anfinsen.
+\newblock Principles that govern the protein folding chains.
+\newblock {\em Science}, 181:233--230, 1973.
+
 \bibitem{condon2003problems}
 Anne Condon.
 \newblock Problems on rna secondary structure prediction and design.
@@ -11,10 +16,22 @@ Graeme~L Conn and David~E Draper.
 \newblock Rna structure.
 \newblock {\em Current opinion in structural biology}, 8(3):278--285, 1998.
 
+\bibitem{dowell2004evaluation}
+Robin~D Dowell and Sean~R Eddy.
+\newblock Evaluation of several lightweight stochastic context-free grammars
+  for rna secondary structure prediction.
+\newblock {\em BMC bioinformatics}, 5(1):71, 2004.
+
 \bibitem{hofacker2008rna}
 Ivo~L Hofacker.
 \newblock Rna consensus structure prediction with rnaalifold.
 \newblock In {\em Comparative Genomics}, pages 527--543. Springer, 2008.
+
+\bibitem{knudsen2003pfold}
+Bjarne Knudsen and Jotun Hein.
+\newblock Pfold: Rna secondary structure prediction using stochastic
+  context-free grammars.
+\newblock {\em Nucleic acids research}, 31(13):3423--3428, 2003.
 
 \bibitem{lorenz2011viennarna}
 Ronny Lorenz, Stephan~HF Bernhart, Christian~Hoener Zu~Siederdissen, Hakim
@@ -40,11 +57,24 @@ Jessica~S Reuter and David~H Mathews.
   analysis.
 \newblock {\em BMC bioinformatics}, 11(1):129, 2010.
 
-\bibitem{studnicka1978computer}
-Gary~M Studnicka, Georgia~M Rahn, Ian~W Cummings, and Winston~A Salser.
-\newblock Computer method for predicting the secondary structure of
-  single-stranded rna.
-\newblock {\em Nucleic acids research}, 5(9):3365--3388, 1978.
+\bibitem{rivas2013four}
+Elena Rivas.
+\newblock The four ingredients of single-sequence rna secondary structure
+  prediction. a unifying perspective.
+\newblock {\em RNA biology}, 10(7):1185, 2013.
+
+\bibitem{rivas2012range}
+Elena Rivas, Raymond Lang, and Sean~R Eddy.
+\newblock A range of complex probabilistic models for rna secondary structure
+  prediction that includes the nearest-neighbor model and more.
+\newblock {\em RNA}, 18(2):193--212, 2012.
+
+\bibitem{sakakibara1994stochastic}
+Yasubumi Sakakibara, Michael Brown, Rebecca~C Underwood, I~Saira Mian, and
+  David Haussler.
+\newblock Stochastic context-free grammars for modeling rna.
+\newblock In {\em System Sciences, 1994. Proceedings of the Twenty-Seventh
+  Hawaii International Conference on}, volume~5, pages 284--293. IEEE, 1994.
 
 \bibitem{xu2012statistical}
 Zhenjiang Xu, Anthony Almudevar, and David~H Mathews.

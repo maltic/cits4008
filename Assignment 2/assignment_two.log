@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.26)  5 APR 2014 20:57
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.26)  6 APR 2014 13:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -223,16 +223,23 @@ Package pdftex.def Info: figure4.png used on input line 129.
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
- [3 <./figure1.png>] [4 <./figure4.png>] (./assignment_two.bbl [5]) [6]
+ [3 <./figure1.png>] [4 <./figure4.png>] [5] <scfg.png, id=32, 1505.625pt x 441
+.65pt>
+File: scfg.png Graphic file (type png)
+
+<use scfg.png>
+Package pdftex.def Info: scfg.png used on input line 199.
+(pdftex.def)             Requested size: 1505.62134pt x 441.64891pt.
+ (./assignment_two.bbl [6 <./scfg.png>] [7]) [8]
 (./assignment_two.aux) ) 
 Here is how much of TeX's memory you used:
- 2127 strings out of 493485
- 28586 string characters out of 3143526
- 89015 words of memory out of 3000000
- 5417 multiletter control sequences out of 15000+200000
+ 2138 strings out of 493485
+ 28753 string characters out of 3143526
+ 89080 words of memory out of 3000000
+ 5427 multiletter control sequences out of 15000+200000
  10888 words of font info for 39 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,6n,23p,484b,263s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,6n,23p,1203b,263s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
@@ -243,10 +250,10 @@ live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmti12.pfb>
-Output written on assignment_two.pdf (6 pages, 559509 bytes).
+Output written on assignment_two.pdf (8 pages, 589275 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
- 45 compressed objects within 1 object stream
+ 78 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -17,7 +17,7 @@
 
 
 %meta info
-\title{CITS4008 Assignment 2}
+\title{CITS4008 Assignment 2: Beyond the Thermodynamic Hypothesis}
 \author{Max Ward}
 %let the date get auto generated
 
@@ -184,13 +184,29 @@ its efficiency ($O(N^3)$ time and $O(N^2)$ space), robustness, and extensibility
 even today, still the most popular available. The most widely used packages for RNA secondary structure prediction all contain implementations of the Zuker algorithm \cite{lorenz2011viennarna, reuter2010rnastructure}.
 
 
-\subsubsection{Thermodynamic Model Improvements}
-
 \section{Stochastic Context Free Grammars}
-\section{Unification and Comparison}
+
+Later, in the early 90s, Hidden Markov Models and Stochastic Context Free Grammars (SCFGs) were being used to model RNA folding. Sakakibara et al. \cite{sakakibara1994stochastic} used SCFGs to accurately fold tRNAs, a family of RNAs with notoriously difficult to predict secondary structures. They did this by defining a formal grammar that parsed secondary structure elements into the original primary sequence, with probabilities assigned to the production rules. These probabilities can be trained using actual RNAs, yielding a model capable of parsing novel RNA sequences. Later methods were similar, but worked for general classes of RNAs \cite{dowell2004evaluation, knudsen2003pfold}.
+
+In 2012 Rivas, Lang \& Eddy \cite{rivas2012range} presented a computation tool called TORNADO which can parse various RNA grammars. It supported the typical grammars used in SCFG approaches, the grammar implicit parsed by Zuker's algorithm upon which the thermodynamic model is based, and many more complex grammars. They used this meta-algorithm to compare the current state of the art models. Because TORNADO is essentially a super-SCFG parser, all of the supported grammars could have their parameters changed arbitrarily. Hence, the experimentally determined thermodynamic model used by the Zuker algorithm could be applied to other grammars, and complex, machined learned parameters could be applied to the Zuker grammar. Rivas, Lang \& Eddy found that complex SCFG models were comparable to the typical thermodynamic model, however they often suffered from overfitting of parameters.
+
+\subsection{Unification of Techniques}
+
+In a subsequent publication, Rivas \cite{rivas2013four} unified pseudoknot-free RNA folding algorithms. Her core observation is that all such prediction algorithms contain the same four key components: an architecture, or the production rules of a grammar; a scoring scheme, or how scores are assigned to these production rules; and the parametrization of the scoring scheme, or the specific values assigned to it. These three features are referred to by Rivas as the `model'. The fourth and final feature is the folding algorithm used to find the best structure given the model. Here Rivas notes that the two dominant folding algorithms are interchangeable. The Cocke-Younger-Kasami (CYK) algorithm used to parse SCFGs and the MFE algorithm based on the work of Zuker are isomorphic for the purpose of parsing RNA grammars. Rivas additionally notes that all scoring schemes and parametrizations appear to hit an accuracy upper limit, and that complex, machine learned models are only slightly more accurate than thermodynamic models. In fact, relatively basic grammars with hundreds of parameters seem to perform almost equivalently to those with tens of thousands.
+
+\begin{figure}
+\begin{center}
+\scalebox{0.27}{\includegraphics{scfg}}
+\end{center}
+\caption{Left shows the parse tree for a context free grammar. Right shows how this tree relates to an RNA secondary structure. Taken from original publication \cite{sakakibara1994stochastic}.}
+\label{fig:scfg}
+\end{figure}
+
 
 \section{Conclusion}
+Current state of the art algorithms fold RNA in a way that globally maximises their score according to some model. The Zuker algorithm, for example, finds the global minimum free energy configuration. SCFGs also globally maximise the perceived probability according to some grammar. This bias is largely due to the `thermodynamic hypothesis'. Anfinsen \cite{anfinsen1973principles} presented this hypothesis as the underlying principle behind the formation of biologically active proteins. He held that protein fold into the minimum Gibbs free energy conformation in their typical biological environment; defined as the molecules physiological state: pH, temperature, ion concentration. Furthermore, through natural selection, molecules that are most likely to fold into the correct shape have evolved, and the atomic interactions of such molecules fully determine their final state. This insight has been invaluable for folding proteins and RNAs in silico. Despite this, it has recently become clear that methods for the prediction of RNA secondary structures have hit an upper limit in accuracy.
 
+Perhaps the thermodynamic hypothesis is insufficiently powerful to explain in vivo RNA secondary structures. As Rivas \cite{rivas2013four} noted, there appears to be a ceiling on the accuracy of algorithms based on the thermodynamic hypothesis. Finding a way beyond this barrier will be important for future advancements, as it is increasingly obvious that RNAs are essential biological agents. RNA prediction is a liminal field, and in dire need of a way beyond the thermodynamic hypothesis.
 
 
 
