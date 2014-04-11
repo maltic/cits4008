@@ -3,4 +3,4 @@
 \contentsline {subsection}{\numberline {1.2}The Zuker Algorithm}{3}
 \contentsline {section}{\numberline {2}Stochastic Context Free Grammars}{5}
 \contentsline {subsection}{\numberline {2.1}Unification of Techniques}{5}
-\contentsline {section}{\numberline {3}Conclusion}{6}
+\contentsline {section}{\numberline {3}Conclusions}{6}
