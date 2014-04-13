@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.10)  11 APR 2014 19:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.10)  13 APR 2014 16:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -208,7 +208,7 @@ Package pdftex.def Info: figure1.png used on input line 75.
 <figure4.png, id=18, 1482.53876pt x 677.53125pt>
 File: figure4.png Graphic file (type png)
  <use figure4.png>
-Package pdftex.def Info: figure4.png used on input line 127.
+Package pdftex.def Info: figure4.png used on input line 123.
 (pdftex.def)             Requested size: 1482.53516pt x 677.52959pt.
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
@@ -218,7 +218,7 @@ Missing character: There is no ™ in font cmr12!
 File: scfg.png Graphic file (type png)
 
 <use scfg.png>
-Package pdftex.def Info: scfg.png used on input line 196.
+Package pdftex.def Info: scfg.png used on input line 186.
 (pdftex.def)             Requested size: 1505.62134pt x 441.64891pt.
  (./assignment_two.bbl [6 <./scfg.png>] [7]) [8]
 (./assignment_two.aux) ) 
@@ -240,7 +240,7 @@ live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmti12.pfb>
-Output written on assignment_two.pdf (8 pages, 590459 bytes).
+Output written on assignment_two.pdf (8 pages, 590492 bytes).
 PDF statistics:
  78 PDF objects out of 1000 (max. 8388607)
  51 compressed objects within 1 object stream
