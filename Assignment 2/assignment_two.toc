@@ -1,6 +1,7 @@
-\contentsline {section}{\numberline {1}Dynamic Programming}{2}
-\contentsline {subsection}{\numberline {1.1}The Nussinov Algorithm}{2}
-\contentsline {subsection}{\numberline {1.2}The Zuker Algorithm}{3}
-\contentsline {section}{\numberline {2}Stochastic Context Free Grammars}{5}
-\contentsline {subsection}{\numberline {2.1}Unification of Techniques}{5}
-\contentsline {section}{\numberline {3}Conclusions}{6}
+\contentsline {section}{\numberline {1}Wherefore The Structure of RNA?}{3}
+\contentsline {section}{\numberline {2}Dynamic Programming}{4}
+\contentsline {subsection}{\numberline {2.1}The Nussinov Algorithm}{4}
+\contentsline {subsection}{\numberline {2.2}The Zuker Algorithm}{5}
+\contentsline {section}{\numberline {3}Stochastic Context Free Grammars}{6}
+\contentsline {subsection}{\numberline {3.1}Unification of Techniques}{7}
+\contentsline {section}{\numberline {4}Conclusions}{7}
