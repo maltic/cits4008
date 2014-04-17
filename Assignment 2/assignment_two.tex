@@ -54,23 +54,43 @@ The algorithmic prediction of RNA molecules dates back to the late 1970s. Despit
 \clearpage
 
 %assignment is too small to require numbered sections, or chapters
-\section{Wherefore The Structure of RNA?} 
+\section{RNA and Aeroplanes} 
 Ribonucleic Acid (RNA) molecules are very much like paper aeroplanes. In some ways, they are simpler. To understand this assertion the reader must unfortunately also understand the chemistry of RNA. Luckily, this chemistry is so straightforward that I shall now describe a working model of it.
+
+
+\begin{figure}
+\begin{center}
+%the image is quite large, needs to be scaled dwon
+\scalebox{0.7}{\includegraphics{RNAssBasic}}
+\end{center}
+\caption{A simple example of how a RNA sequence might fold. Dotted lines represent potential bonds between nucleotides, double lines represent actual bonds. The progression of folding follows from left to right.}
+\label{fig:RNAssBasic}
+\end{figure}
+
 
 As the name would imply, RNA is chemically similar to Deoxyribonucleic Acid (DNA). However, unlike DNA, RNA is single stranded. This means that it is made of a single sequence of connected nucleotides. These nucleotides are like links in a chain. Each such nucleotide is attached to it's direct neighbours in the sequence. Much like an actual chain, a complete RNA sequence is flexible, and can move about freely. While the nucleotides I have mentioned are chemically ingenious, we need not know the details. All that needs to be said here is that there are four types: Adenine (often abbreviated to A), Guanine (G), Cytosine (C), and Uracil (U). Adenine readily forms chemical bonds with Uracil, and vice-versa. Similarly, Guanine and Cytosine have a propensity to bond. Additionally, Guanine and Uracil sometimes form weak bonds. In the parlance of RNA research, these types of bonds are called `A-U', `G-C', and `G-U' respectively.
 
-So what about the paper aeroplanes? When constructing such a machine, one starts with a blank sheet of paper. One then folds this paper repeatedly upon itself. This is precisely what happens when RNA molecules form bonds. Say a G nucleotide sees an attractive looking C nucleotide and a chemical bond forms between them. This would cause the entire chain to fold on itself so that the G and C nucleotides come into close proximity. After the bond has formed, we are left with a loop containing the nucleotides that were between the G and the C in our theoretical RNA. The folding process may then repeat itself for nucleotides that are contained inside this loop region. Hence we say that the bonds of RNA molecules are nested. Folds form within folds, and therefore the structure of RNA is recursive. To clarify this concept, I shall recapitulate the paper aeroplane analogy. Paper aeroplanes are made from finite, two dimensional rectangles that fold in three dimensions. In contrast, RNA molecules are finite, one dimensional line segments that fold in two dimensions.
+So what about the paper aeroplanes? When constructing such a machine, one starts with a blank sheet of paper. One then folds this paper repeatedly upon itself. This is precisely what happens when RNA molecules form bonds. Say a G nucleotide sees an attractive looking C nucleotide and a chemical bond forms between them. This would cause the entire chain to fold on itself so that the G and C nucleotides come into close proximity. After the bond has formed, we are left with a loop containing the nucleotides that were between the G and the C in our theoretical RNA (see Figure \ref{fig:RNAssBasic}). The folding process may then repeat itself for nucleotides that are contained inside this loop region. Hence we say that the bonds of RNA molecules are nested. Folds form within folds, and therefore the structure of RNA is recursive. To clarify this concept, I shall recapitulate the paper aeroplane analogy. Paper aeroplanes are made from finite, two dimensional rectangles that fold repeatedly in three dimensions. In contrast, RNA molecules are finite, one dimensional line segments that fold repeatedly in two dimensions.
 
-Ribonucleic Acid (RNA) is a biologically active molecule similar in structure to DNA. Recent research has found myriad functions for RNA. For example, RNA can act as a catalyst for mRNA splicing, peptide bond formation, and can alter the regulation of genes
-\cite{xu2012statistical}. Because of its inherently single stranded nature, RNA forms bonds with itself, folding into
-secondary and tertiary structures \cite{conn1998rna}.
 
-It is axiomatic that chemical structure is tantamount to biological function, and RNA is no exception. For this reason, there has and continues to be an intense
-interest in predicting the secondary structure of RNA
-molecules in silico. This is because it will allow the detection and classification of unknown RNAs, and assist the design of new RNA based drugs \cite{condon2003problems}. The secondary structure of RNA
+\begin{figure}
+\begin{center}
+%the image is quite large, needs to be scaled dwon
+\scalebox{0.2}{\includegraphics{RNAss}}
+\end{center}
+\caption{How a real RNA might fold. Depicted on the left is the final folded state. Depicted on the right is an arc diagram. In the arc diagram, the RNA has been laid out on a line. The blue arcs represent bonds between nucleotides in the RNA. The arc diagram corresponds to the structure on the left.}
+\label{fig:RNAss}
+\end{figure}
+
+\subsection{Why Bother?}
+
+RNA molecules fold into interesting structures, but why does this matter? RNA is actually a biologically active molecule. Recent research has found myriad functions for RNA. For example, RNA can act as a catalyst for mRNA splicing, peptide bond formation, and can alter the regulation of genes
+\cite{xu2012statistical}. It is axiomatic that chemical structure is tantamount to biological function, and RNA is no exception. For this reason, there has and continues to be an intense
+interest in predicting the structure of RNA
+molecules in silico. Furthermore, it will allow the detection and classification of unknown RNAs, and assist the design of new RNA based drugs \cite{condon2003problems}. The structure of RNA
 is also highly conserved during evolution, indicating its importance \cite{hofacker2008rna}.
 
-I endeavour to give the reader a brisk but incisive review of RNA secondary structure prediction algorithms in this report. For the sake of succinctness, my focus shall be pseudoknot-free RNA prediction methods, particularly those able to predict RNA structures ex nihilo---that is with no information other than the RNA sequence itself.
+I endeavour to give the reader a brisk but incisive review of RNA secondary structure prediction algorithms in this report. For the sake of succinctness, my focus shall be methods able to predict RNA structures ex nihilo---that is with no information other than the RNA sequence itself. Additionally, I have omitted algorithms capable of predicting structures called pseudoknots. This is because such structures are uncommon, and because prediction of RNA structures with pseudoknots is an NP-complete problem \cite{lyngso2000rna}. The reader should also note that the kinds of structures I have here described are called `secondary structures'. The primary structure of RNA is simply the chain of nucleotides. Thus, as I have explained, the secondary structure of RNA is its two dimensional shape after folding. This shape is what is computed by `secondary structure prediction' algorithms.
 
 \section{Dynamic Programming}
 \subsection{The Nussinov Algorithm}

@@ -11,11 +11,6 @@ Anne Condon.
 \newblock In {\em Automata, Languages and Programming}, pages 22--32. Springer,
   2003.
 
-\bibitem{conn1998rna}
-Graeme~L Conn and David~E Draper.
-\newblock Rna structure.
-\newblock {\em Current opinion in structural biology}, 8(3):278--285, 1998.
-
 \bibitem{dowell2004evaluation}
 Robin~D Dowell and Sean~R Eddy.
 \newblock Evaluation of several lightweight stochastic context-free grammars
@@ -38,6 +33,11 @@ Ronny Lorenz, Stephan~HF Bernhart, Christian~Hoener Zu~Siederdissen, Hakim
   Tafer, Christoph Flamm, Peter~F Stadler, Ivo~L Hofacker, et~al.
 \newblock Viennarna package 2.0.
 \newblock {\em Algorithms for Molecular Biology}, 6(1):26, 2011.
+
+\bibitem{lyngso2000rna}
+Rune~B Lyngs{\o} and Christian~NS Pedersen.
+\newblock Rna pseudoknot prediction in energy-based models.
+\newblock {\em Journal of computational biology}, 7(3-4):409--427, 2000.
 
 \bibitem{nussinov1980fast}
 Ruth Nussinov and Ann~B Jacobson.
