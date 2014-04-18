@@ -76,6 +76,12 @@ Yasubumi Sakakibara, Michael Brown, Rebecca~C Underwood, I~Saira Mian, and
 \newblock In {\em System Sciences, 1994. Proceedings of the Twenty-Seventh
   Hawaii International Conference on}, volume~5, pages 284--293. IEEE, 1994.
 
+\bibitem{studnicka1978computer}
+Gary~M Studnicka, Georgia~M Rahn, Ian~W Cummings, and Winston~A Salser.
+\newblock Computer method for predicting the secondary structure of
+  single-stranded rna.
+\newblock {\em Nucleic acids research}, 5(9):3365--3388, 1978.
+
 \bibitem{xu2012statistical}
 Zhenjiang Xu, Anthony Almudevar, and David~H Mathews.
 \newblock Statistical evaluation of improvement in rna secondary structure
