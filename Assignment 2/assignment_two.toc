@@ -1,9 +1,9 @@
 \contentsline {section}{\numberline {1}RNA and Aeroplanes}{3}
-\contentsline {subsection}{\numberline {1.1}Why Bother?}{4}
+\contentsline {subsection}{\numberline {1.1}The Importance of RNA}{4}
 \contentsline {section}{\numberline {2}Dynamic Programming}{5}
 \contentsline {subsection}{\numberline {2.1}The Nussinov Algorithm}{5}
 \contentsline {subsection}{\numberline {2.2}The Zuker Algorithm}{5}
 \contentsline {section}{\numberline {3}Stochastic Context Free Grammars}{6}
 \contentsline {subsection}{\numberline {3.1}Unification of Techniques}{7}
-\contentsline {section}{\numberline {4}The Thermodynamic Hypothesis}{8}
+\contentsline {section}{\numberline {4}The Thermodynamic Hypothesis}{7}
 \contentsline {section}{\numberline {5}Conclusions}{8}

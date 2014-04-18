@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.26)  18 APR 2014 12:37
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.26)  18 APR 2014 15:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -239,20 +239,26 @@ File: figure4.png Graphic file (type png)
  <use figure4.png>
 Package pdftex.def Info: figure4.png used on input line 123.
 (pdftex.def)             Requested size: 1482.53516pt x 677.52959pt.
- [5] [6 <./figure4.png>] <scfg.png, id=37, 1505.625pt x 441.65pt>
+ [5] [6 <./figure4.png>] <scfg.png, id=38, 1505.625pt x 441.65pt>
 File: scfg.png Graphic file (type png)
  <use scfg.png>
 Package pdftex.def Info: scfg.png used on input line 148.
 (pdftex.def)             Requested size: 1505.62134pt x 441.64891pt.
- [7 <./scfg.png>] (./assignment_two.bbl [8]) [9] (./assignment_two.aux) ) 
+ [7]
+Overfull \hbox (11.92226pt too wide) in paragraph at lines 160--161
+\OT1/cmr/m/n/12 As I have said, the Ther-mo-dy-namic Hy-poth-e-sis posits that 
+bi-o-log-i-cally ac-tive molecules
+ []
+
+(./assignment_two.bbl [8 <./scfg.png>] [9]) [10] (./assignment_two.aux) ) 
 Here is how much of TeX's memory you used:
- 2145 strings out of 493485
- 28879 string characters out of 3143526
- 89068 words of memory out of 3000000
- 5430 multiletter control sequences out of 15000+200000
+ 2146 strings out of 493485
+ 28897 string characters out of 3143526
+ 89072 words of memory out of 3000000
+ 5431 multiletter control sequences out of 15000+200000
  10888 words of font info for 39 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,6n,23p,1276b,263s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,6n,23p,1314b,263s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texliv
@@ -261,11 +267,12 @@ f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmti12.pfb>
-Output written on assignment_two.pdf (9 pages, 797736 bytes).
+fonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmti12.pfb>
+Output written on assignment_two.pdf (10 pages, 806621 bytes).
 PDF statistics:
- 77 PDF objects out of 1000 (max. 8388607)
- 50 compressed objects within 1 object stream
+ 84 PDF objects out of 1000 (max. 8388607)
+ 55 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
