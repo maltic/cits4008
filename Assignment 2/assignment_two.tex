@@ -17,7 +17,7 @@
 
 
 %meta info
-\title{CITS4008 Assignment 2: Beyond the Thermodynamic Hypothesis}
+\title{Beyond the Thermodynamic Hypothesis}
 \author{Max Ward}
 %let the date get auto generated
 
@@ -53,10 +53,14 @@ The algorithmic prediction of RNA molecules dates back to the late 1970s. Despit
 \listoffigures
 \clearpage
 
-%assignment is too small to require numbered sections, or chapters
-\section{RNA and Aeroplanes} 
-Ribonucleic Acid (RNA) molecules are very much like paper aeroplanes. In some ways, they are simpler. To understand this assertion the reader must unfortunately also understand the chemistry of RNA. Luckily this chemistry is so straightforward that I shall now describe a working model of it.
+\section{Introduction}
+This report outlines the algorithmic prediction of Ribonucleic Acid (RNA) structures. An overview of the essential techniques is given. In particular, the lack of significant progress is stressed, and possible explanations are explored. However, we must first understand what RNA are, and how they fold. RNA molecules fold much like paper aeroplanes. To understand this assertion the reader must unfortunately understand the chemistry of RNA. Luckily this chemistry is so straightforward that I shall now describe a working model of it.
 
+\section{RNA and Aeroplanes} 
+As the name implies, RNA is chemically similar to Deoxyribonucleic Acid (DNA). However, unlike DNA, RNA is single stranded. This means that it is made of a single sequence of connected nucleotides. These nucleotides are like links in a chain. Each such nucleotide is attached to it's direct neighbours in the sequence. Much like an actual chain, a complete RNA sequence is flexible, and can move about freely. While the nucleotides I have mentioned are chemically ingenious, we need not know the details. All that need be said here is that there are four types: Adenine (often abbreviated to A), Guanine (G), Cytosine (C), and Uracil (U). Adenine readily forms chemical bonds with Uracil, and vice-versa. Similarly, Guanine and Cytosine have a propensity to bond. Additionally, Guanine and Uracil sometimes form weak bonds. In the parlance of RNA research, these types of bonds are called `A-U', `G-C', and `G-U' respectively.
+
+
+So what about the paper aeroplanes? When constructing such a machine, one starts with a blank sheet of paper. One then folds this paper repeatedly upon itself. This is precisely what happens when RNA molecules form bonds. Say a G and C nucleotide began forming a chemical bond. This would cause the entire chain to fold on itself as the G and C nucleotides come into close proximity. After the bond has formed, we are left with a loop containing the nucleotides that were between the G and the C in our theoretical RNA (see Figure \ref{fig:RNAssBasic}). The folding process may then repeat itself for nucleotides that are contained inside this loop region. Hence we say that the bonds of RNA molecules are nested (see Figure \ref{fig:RNAss} for a visual example). Folds form within folds; the structure of RNA is recursive. To clarify these concepts, I shall recapitulate the paper aeroplane analogy. Paper aeroplanes are made from finite, two dimensional rectangles that fold repeatedly in three dimensions. In contrast, RNA molecules are finite, one dimensional line segments that fold repeatedly in two dimensions. For more information the reader may refer to "How RNA Folds" which was published in the \emph{Journal of Molecular Biology} \cite{tinoco1999rna}.
 
 \begin{figure}
 \begin{center}
@@ -68,20 +72,6 @@ Ribonucleic Acid (RNA) molecules are very much like paper aeroplanes. In some wa
 \end{figure}
 
 
-As the name would imply, RNA is chemically similar to Deoxyribonucleic Acid (DNA). However, unlike DNA, RNA is single stranded. This means that it is made of a single sequence of connected nucleotides. These nucleotides are like links in a chain. Each such nucleotide is attached to it's direct neighbours in the sequence. Much like an actual chain, a complete RNA sequence is flexible, and can move about freely. While the nucleotides I have mentioned are chemically ingenious, we need not know the details. All that need be said here is that there are four types: Adenine (often abbreviated to A), Guanine (G), Cytosine (C), and Uracil (U). Adenine readily forms chemical bonds with Uracil, and vice-versa. Similarly, Guanine and Cytosine have a propensity to bond. Additionally, Guanine and Uracil sometimes form weak bonds. In the parlance of RNA research, these types of bonds are called `A-U', `G-C', and `G-U' respectively.
-
-So what about the paper aeroplanes? When constructing such a machine, one starts with a blank sheet of paper. One then folds this paper repeatedly upon itself. This is precisely what happens when RNA molecules form bonds. Say a G nucleotide sees an attractive looking C nucleotide and a chemical bond forms between them. This would cause the entire chain to fold on itself so that the G and C nucleotides come into close proximity. After the bond has formed, we are left with a loop containing the nucleotides that were between the G and the C in our theoretical RNA (see Figure \ref{fig:RNAssBasic}). The folding process may then repeat itself for nucleotides that are contained inside this loop region. Hence we say that the bonds of RNA molecules are nested (see Figure \ref{fig:RNAss} for a visual example). Folds form within folds, and therefore the structure of RNA is recursive. To clarify these concepts, I shall recapitulate the paper aeroplane analogy. Paper aeroplanes are made from finite, two dimensional rectangles that fold repeatedly in three dimensions. In contrast, RNA molecules are finite, one dimensional line segments that fold repeatedly in two dimensions---RNA folding is simpler than paper aeroplane construction!
-
-
-\begin{figure}
-\begin{center}
-%the image is quite large, needs to be scaled dwon
-\scalebox{0.17}{\includegraphics{RNAss}}
-\end{center}
-\caption{How a real RNA might fold. Depicted on the left is the final folded state of a sample RNA. Blue lines represent bonds between nucleotides. Depicted on the right is the same RNA structure organized into an arc diagram. In an arc diagram the RNA nucleotide chain is laid out lengthwise; blue arcs correspond to bonds in the diagram on the left. The arc diagram is included here to illustrate how bonds are contained recursively within other bonds.}
-\label{fig:RNAss}
-\end{figure}
-
 \subsection{The Importance of RNA}
 
 RNA molecules fold into interesting structures, but why do they matter? RNA is actually a biologically active molecule. Recent research has found myriad functions for RNA. For example, RNA can act as a catalyst for mRNA splicing, peptide bond formation, and can alter the regulation of genes
@@ -91,6 +81,15 @@ molecules in silico. Furthermore, it will allow the detection and classification
 is also highly conserved during evolution, indicating its importance \cite{hofacker2008rna}.
 
 I endeavour to give the reader a brisk but incisive review of RNA secondary structure prediction algorithms in this report. For the sake of succinctness, my focus shall be methods able to predict RNA structures ex nihilo---that is with no information other than the RNA sequence itself. Additionally, I have omitted algorithms capable of predicting structures called pseudoknots. This is because such structures are uncommon, and because prediction of RNA structures with pseudoknots is an NP-complete problem \cite{lyngso2000rna}. The reader should also note that the kinds of structures I have here described are called `secondary structures'. The primary structure of RNA is simply the chain of nucleotides. Thus, as I have explained, the secondary structure of RNA is its two dimensional shape after folding. This shape is what is computed by `secondary structure prediction' algorithms. The most popular secondary structure prediction algorithms are those utilizing dynamic programming.
+
+\begin{figure}
+\begin{center}
+%the image is quite large, needs to be scaled dwon
+\scalebox{0.17}{\includegraphics{RNAss}}
+\end{center}
+\caption{How a real RNA might fold. Depicted on the left is the final folded state of a sample RNA. Blue lines represent bonds between nucleotides. Depicted on the right is the same RNA structure organized into an arc diagram. In an arc diagram the RNA nucleotide chain is laid out lengthwise; blue arcs correspond to bonds in the diagram on the left. The arc diagram is included here to illustrate how bonds are contained recursively within other bonds.}
+\label{fig:RNAss}
+\end{figure}
 
 \section{Dynamic Programming}
 \subsection{The Nussinov Algorithm}
@@ -128,14 +127,14 @@ publication \cite{zuker1981optimal}.}
 \end{figure}
 
 
-The algorithm of Zuker \& Stiegler \cite{zuker1981optimal} has some problems, however. Because there exist no experimentally determined energy formula for multiloops, the values found in the Zuker algorithm are guessed. Additionally, the size of possible multiloops is limited, otherwise the time complexity of the Zuker algorithm increases by an order of magnitude. With these concessions accounted for, the final time complexity of the Zuker algorithm (and also the Nussinov algorithm) is $O(n^3)$, where $n$ is the number of nucleotides in the RNA. The space complexity for both the Zuker and the Nussninov algorithm is $O(n^2)$. In short, both are able to efficiently predict secondary structures for RNAs with hundreds of bases on modern hardware. As one might expect, the Zuker algorithm is the more accurate of the two. Because of
+The algorithm of Zuker \& Stiegler \cite{zuker1981optimal} has some problems, however. Because there exist no experimentally determined energy formula for multiloops, the values found in the Zuker algorithm are guessed. Additionally, the size of possible multiloops is limited, otherwise the time complexity of the Zuker algorithm increases by an order of magnitude. With these concessions accounted for, the final time complexity of the Zuker algorithm (and also the Nussinov algorithm) is $O(n^3)$, where $n$ is the number of nucleotides in the RNA. The space complexity for both the Zuker and the Nussninov algorithm is $O(n^2)$. In short, both are able to efficiently predict secondary structures for RNAs with hundreds of bases, on modern hardware. As one might expect, the Zuker algorithm is the more accurate of the two. Because of
 its efficiency, robustness, and extensibility, this method is,
 even today, still the most popular available. The most widely used packages for RNA secondary structure prediction all contain implementations of the Zuker algorithm \cite{lorenz2011viennarna, reuter2010rnastructure}.
 
 
 \section{Stochastic Context Free Grammars}
 
-Later, in the early 90s, Hidden Markov models and Stochastic Context Free Grammars (SCFGs) were being used to model RNA folding. A Context Free Grammar (CFG) is a collection of production rules that translate one symbol into another. For example, some rule might translate a symbol $V$ into another symbol $w$, this is represented as $V \rightarrow w$. Symbols can be either terminal, or nonterminal. The rules of a CFG are applied to symbols repeatedly until they produce only nonterminal symbols. CFGs were first formalized by Chomsky in the 50s \cite{chomsky1956three}. A SCFG is a CFG whose production rules have associated probabilities. Sakakibara et al. \cite{sakakibara1994stochastic} used SCFGs to accurately fold tRNAs, a family of RNAs with notoriously difficult to predict secondary structures. The tRNA family is predicted poorly by the Zuker algorithm in particular. They did this by defining a formal grammar that parses secondary structure elements into a nucleotide sequence, with probabilities assigned to the production rules. These probabilities can be trained using actual RNAs, yielding a model capable of parsing novel RNA sequences. Later methods are similar, but work for general classes of RNA \cite{dowell2004evaluation, knudsen2003pfold}.
+Later, in the early 90s, Hidden Markov models and Stochastic Context Free Grammars (SCFGs) were being used to model RNA folding. A Context Free Grammar (CFG) is a collection of production rules that translate one symbol into another. For example, some rule might translate a symbol $V$ into another symbol $w$, this is represented as $V \rightarrow w$. Symbols can be either terminal, or nonterminal. The rules of a CFG are applied to symbols repeatedly until they produce only nonterminal symbols. This process is called `parsing'. CFGs were first formalized by Chomsky in the 50s \cite{chomsky1956three}. A SCFG is a CFG whose production rules have associated probabilities. Sakakibara et al. \cite{sakakibara1994stochastic} used SCFGs to accurately fold tRNAs, a family of RNAs with notoriously difficult to predict secondary structures. The tRNA family is predicted poorly by the Zuker algorithm in particular. They did this by defining a formal grammar that parses secondary structure elements into a nucleotide sequence, with probabilities assigned to the production rules. These probabilities can be trained using actual RNAs, yielding a model capable of parsing novel RNA sequences. Later methods are similar, but work for general classes of RNA \cite{dowell2004evaluation, knudsen2003pfold}.
 
 In 2012 Rivas, Lang \& Eddy \cite{rivas2012range} presented a computation tool called TORNADO which can parse various RNA grammars. It supports the typical grammars used in SCFG approaches, the grammar implicit in Zuker's algorithm upon which the thermodynamic model is based, and many more complex grammars. They used this meta-algorithm to compare the current state of the art models. Because TORNADO is essentially a super-SCFG parser, all of the supported grammars can have their parameters changed arbitrarily. Hence, the experimentally determined thermodynamic model, which the Zuker algorithm uses, can be applied to other grammars, and complex, machined learned parameters can be applied to the Zuker grammar. Rivas, Lang \& Eddy found that the best machine learned models are comparable to the typical thermodynamic model in accuracy. However, they often suffer from overfitting.
 
@@ -157,7 +156,7 @@ Current state of the art algorithms fold RNA in a way that globally maximises th
 
 \section{Conclusions}
 
-As I have said, the Thermodynamic Hypothesis posits that biologically active molecules will have thermodynamically minimal free energy configurations. I submit that this hypothesis may not entirely hold for RNA molecules. By this I mean that it is insufficiently powerful to explain in vivo RNA secondary structures. As Rivas \cite{rivas2013four} noted, there appears to be a ceiling on the accuracy of our current algorithms. I have given a brief but working summary of these algorithms, stressing their adherence to the Thermodynamic Hypothesis. Perhaps local interactions are stronger factors than global interactions during RNA folding. Alternatively, it could be that the folding pathway itself is more important than the final free energy of the folded molecule. Regardless, finding a way past the accuracy barrier will be important for future advancements, as it is increasingly obvious that RNAs are essential biological agents. If we are to improve our algorithms, then we are in need of a way beyond the Thermodynamic Hypothesis.
+The Thermodynamic Hypothesis posits that biologically active molecules will have thermodynamically minimal free energy configurations. I submit that this hypothesis may not entirely hold for RNA molecules. By this I mean that it is insufficiently powerful to explain in vivo RNA secondary structures. As Rivas \cite{rivas2013four} noted, there appears to be a ceiling on the accuracy of our current algorithms. I have given a brief but working summary of these algorithms, stressing their adherence to the Thermodynamic Hypothesis. Perhaps local interactions are stronger factors than global interactions during RNA folding. Alternatively, it could be that the folding pathway itself is more important than the final free energy of the folded molecule. Regardless, finding a way past the accuracy barrier will be important for future advancements, as it is increasingly obvious that RNAs are essential biological agents. If we are to improve our algorithms, then we are in need of a way beyond the Thermodynamic Hypothesis.
 
 
 

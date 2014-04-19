@@ -1,7 +1,7 @@
 \begin{thebibliography}{10}
 
 \bibitem{anfinsen1973principles}
-CB~Anfinsen.
+Christian~B Anfinsen.
 \newblock Principles that govern the protein folding chains.
 \newblock {\em Science}, 181:233--230, 1973.
 
@@ -86,6 +86,11 @@ Gary~M Studnicka, Georgia~M Rahn, Ian~W Cummings, and Winston~A Salser.
 \newblock Computer method for predicting the secondary structure of
   single-stranded rna.
 \newblock {\em Nucleic acids research}, 5(9):3365--3388, 1978.
+
+\bibitem{tinoco1999rna}
+Ignacio Tinoco~Jr and Carlos Bustamante.
+\newblock How rna folds.
+\newblock {\em Journal of molecular biology}, 293(2):271--281, 1999.
 
 \bibitem{xu2012statistical}
 Zhenjiang Xu, Anthony Almudevar, and David~H Mathews.
