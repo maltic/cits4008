@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.26)  19 APR 2014 14:01
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.26)  21 APR 2014 12:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -126,18 +126,18 @@ LaTeX Info: Redefining \] on input line 2667.
 (./assignment_two.aux)
 \openout1 = `assignment_two.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -222,7 +222,7 @@ nu-cleotides.
 ] <RNAssBasic.pdf, id=14, 279.0425pt x 259.97125pt>
 File: RNAssBasic.pdf Graphic file (type pdf)
  <use RNAssBasic.pdf>
-Package pdftex.def Info: RNAssBasic.pdf used on input line 68.
+Package pdftex.def Info: RNAssBasic.pdf used on input line 75.
 (pdftex.def)             Requested size: 279.04181pt x 259.97061pt.
 
 [3
@@ -230,27 +230,27 @@ Package pdftex.def Info: RNAssBasic.pdf used on input line 68.
 ] <RNAss.png, id=19, 2509.375pt x 854.19125pt>
 File: RNAss.png Graphic file (type png)
  <use RNAss.png>
-Package pdftex.def Info: RNAss.png used on input line 88.
+Package pdftex.def Info: RNAss.png used on input line 95.
 (pdftex.def)             Requested size: 2509.36891pt x 854.18918pt.
  [4 <./RNAssBasic.pdf>] [5 <./RNAss.png>] <figure4.png, id=31, 1482.53876pt x 6
 77.53125pt>
 File: figure4.png Graphic file (type png)
 
 <use figure4.png>
-Package pdftex.def Info: figure4.png used on input line 122.
+Package pdftex.def Info: figure4.png used on input line 129.
 (pdftex.def)             Requested size: 1482.53516pt x 677.52959pt.
  [6 <./figure4.png>] <scfg.png, id=38, 1505.625pt x 441.65pt>
 File: scfg.png Graphic file (type png)
 
 <use scfg.png>
-Package pdftex.def Info: scfg.png used on input line 147.
+Package pdftex.def Info: scfg.png used on input line 154.
 (pdftex.def)             Requested size: 1505.62134pt x 441.64891pt.
  [7] [8 <./scfg.png>] (./assignment_two.bbl [9]) [10]
 (./assignment_two.aux) ) 
 Here is how much of TeX's memory you used:
  2147 strings out of 493485
  28912 string characters out of 3143526
- 89053 words of memory out of 3000000
+ 89143 words of memory out of 3000000
  5432 multiletter control sequences out of 15000+200000
  10888 words of font info for 39 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -264,7 +264,7 @@ are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on assignment_two.pdf (10 pages, 805223 bytes).
+Output written on assignment_two.pdf (10 pages, 806342 bytes).
 PDF statistics:
  84 PDF objects out of 1000 (max. 8388607)
  55 compressed objects within 1 object stream
