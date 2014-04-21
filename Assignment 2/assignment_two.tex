@@ -1,9 +1,13 @@
 
-
 %template setup, made it adhere to UWA standards
 \documentclass[12pt, a4paper]{article}
 \usepackage{graphicx}
 \usepackage{amsmath}
+
+%fix caption formatting
+\usepackage[font=small,labelfont=bf]{caption}
+
+%slightly modified UWA setup
 \setlength{\oddsidemargin}{0.5cm}
 \setlength{\evensidemargin}{0.5cm}
 \setlength{\topmargin}{-1.6cm}
@@ -92,7 +96,7 @@ I endeavour to give the reader a brisk but incisive review of RNA secondary stru
 \begin{figure}
 \begin{center}
 %the image is quite large, needs to be scaled dwon
-\scalebox{0.17}{\includegraphics{RNAss}}
+\scalebox{0.11}{\includegraphics{RNAss}}
 \end{center}
 \caption{How a real RNA might fold. Depicted on the left is the final folded state of a sample RNA. Blue lines represent bonds between nucleotides. Depicted on the right is the same RNA structure organized into an arc diagram. In an arc diagram the RNA nucleotide chain is laid out lengthwise; blue arcs correspond to bonds in the diagram on the left. The arc diagram is included here to illustrate how bonds are contained recursively within other bonds.}
 \label{fig:RNAss}
