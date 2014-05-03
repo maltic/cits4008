@@ -9,6 +9,8 @@ extern "C"
     #include "fold.h"
 }
 
+#include "../accuracy/accuracy.h"
+
 // CoFold params
 extern double distTau;
 extern double distAlpha;
@@ -43,9 +45,11 @@ int main()
 
 		milliseconds ms = std::chrono::duration_cast<milliseconds>(t1 - t0);
 
+		float fscore = calc_f1score(sstruct, string(structure));
+
 
 		//output
-		cout << id << '\t' << ms.count() << '\t' << fe << '\t' << structure << endl;
+		cout << id << '\t' << ms.count() << '\t' << rna.size() << '\t' << fscore << endl;
 		cin >> ws;
 	}
 	return 0;

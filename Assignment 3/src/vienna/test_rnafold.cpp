@@ -2,12 +2,15 @@
 #include <iostream>
 #include <string>
 #include <chrono>
+#include <cstdlib>
 
 //include external libs
 extern "C" 
 {
     #include "fold.h"
 }
+
+#include "../accuracy/accuracy.h"
 
 using namespace std;
 
@@ -35,9 +38,12 @@ int main()
 
 		milliseconds ms = std::chrono::duration_cast<milliseconds>(t1 - t0);
 
+		float fscore = calc_f1score(sstruct, string(structure));
+
+		delete[] structure;
 
 		//output
-		cout << id << '\t' << ms.count() << '\t' << fe << '\t' << structure << endl;
+		cout << id << '\t' << ms.count() << '\t' << rna.size() << '\t' << fscore << endl;
 		
 		cin >> ws;
 	}

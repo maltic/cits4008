@@ -1,0 +1,104 @@
+
+%template setup, made it adhere to UWA standards
+\documentclass[12pt, a4paper]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+%fix caption formatting
+\usepackage[font=small,labelfont=bf]{caption}
+
+%slightly modified UWA setup
+\setlength{\oddsidemargin}{0.5cm}
+\setlength{\evensidemargin}{0.5cm}
+\setlength{\topmargin}{-1.6cm}
+\setlength{\leftmargin}{0.5cm}
+\setlength{\rightmargin}{0.5cm}
+\setlength{\textheight}{24.00cm} 
+\setlength{\textwidth}{15.00cm}
+\parindent 0pt
+\parskip 5pt
+\pagestyle{plain}
+
+
+%meta info
+\title{Beyond the Thermodynamic Hypothesis}
+\author{Max Ward \\
+School of Computer Science \& Software Engineering \\
+The University of Western Australia}
+%let the date get auto generated
+
+%author list formatter. not really needed here, but always nice to have
+\newcommand{\namelistlabel}[1]{\mbox{#1}\hfil}
+\newenvironment{namelist}[1]{%1
+\begin{list}{}
+    {
+        \let\makelabel\namelistlabel
+        \settowidth{\labelwidth}{#1}
+        \setlength{\leftmargin}{1.1\labelwidth}
+    }
+  }{%1
+\end{list}}
+
+
+
+%-------------------------------------------------------------------------
+
+\begin{document}
+
+
+%title first!
+\maketitle
+
+\begin{abstract}
+Analysis of thermodynamically based algorithms for RNA structure prediction
+\end{abstract}
+
+
+{\bf Keywords:} Ribonucleic acid, structure, prediction, thermodynamic hypothesis.
+
+{\bf CR Classification:} J.3 Biology and genetics.
+
+\clearpage
+
+\tableofcontents
+\listoffigures
+\clearpage
+
+\section{Introduction}
+\subsection{Motivation}
+mention hypothesis at end, which is that new algorithms have improved accuracy over older algorithms. As a secondary supposition, they should scale no worse than older algorithms.
+\subsection{Relevant Algorithms}
+Explain in high level terms the three algorithms tested
+
+\section{Materials and Methods}
+\subsection{Environment}
+How I tested it
+\subsection{Data Set}
+Strand stuff
+\subsection{Algorithms}
+Config and stuff
+\subsection{Additional Software}
+gretl etc
+\subsection{Accuracy}
+explain f score and why it is useful for us
+
+\section{Results}
+\subsection{Accuracy}
+\subsubsection{Small RNA}
+\subsubsection{Moderate RNA}
+\subsubsection{Large RNA}
+\subsection{Time}
+
+\section{Discussion}
+
+\section{Conclusions}
+
+
+
+%let bibtex do all the hard work
+\bibliographystyle{plain}
+\bibliography{assignment_two}
+
+
+\end{document}
+

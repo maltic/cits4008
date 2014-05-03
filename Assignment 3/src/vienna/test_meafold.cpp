@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <chrono>
+#include <cstdlib>
 
 //include external libs
 extern "C" 
@@ -14,6 +15,8 @@ extern "C"
     #include "fold_vars.h"
 
 }
+
+#include "../accuracy/accuracy.h"
 
 
 using namespace std;
@@ -34,9 +37,6 @@ int main()
     model_detailsT md;
     set_model_details(&md);
 
-    // these seems like magic numbers because they are
-    // i basically ripped the default settings from RNAfold
-    pf_paramT *params = get_boltzmann_factors(37.0, 1.0, md, 1.9);
 
     // cout << params->pf_scale << endl;
 
@@ -46,31 +46,45 @@ int main()
 	{
 		string id, rna, sstruct;
 		cin >> id >> rna >> sstruct;
+
+		// these seems like magic numbers because they are
+    	// i basically ripped the default settings from RNAfold
+    	float scale = (rna.size() > 1000) ? 1.9 : 1.1; // scale is needed to avoid precision errors
+    	pf_paramT *params = get_boltzmann_factors(37.0, 1.0, md, scale);
+
 		// fold that rna!
-		Clock::time_point t0 = Clock::now();
+		char *ss = new char[rna.size()+1];
+	    for (int i = 0; i < rna.size(); ++i)
+	        ss[i] = '.';
+	    ss[rna.size()] = '\0';
+
+	    Clock::time_point t0 = Clock::now();
 
 		// compute partition function
 		double fe = pf_fold_par (rna.c_str(), NULL, params, 1, 0, 0);
 
-	    char *ss = new char[rna.size()+1];
-	    for (int i = 0; i < rna.size(); ++i)
-	        ss[i] = '.';
-	    ss[rna.size()] = '\0';
+	   
 	    // get prob matrix and list
 	    double *bppm = export_bppm();
 	    plist *pl = NULL;
 	    assign_plist_from_pr(&pl, bppm, rna.size(), 0.0);
+
 	    // compute MEA structure
 	    float score = MEA(pl, ss, gamma);
-
 
 		Clock::time_point t1 = Clock::now();
 
 		milliseconds ms = std::chrono::duration_cast<milliseconds>(t1 - t0);
 
 
+		float fscore = calc_f1score(sstruct, string(ss));
+
+		delete[] ss;
+		free(pl);
+
+
 		//output
-		cout << id << '\t' << ms.count() << '\t' << score << '\t' << ss << endl;
+		cout << id << '\t' << ms.count() << '\t' << rna.size() << '\t' << fscore << endl;
 		
 		cin >> ws;
 	}

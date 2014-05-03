@@ -1,0 +1,17 @@
+\contentsline {section}{\numberline {1}Introduction}{3}
+\contentsline {subsection}{\numberline {1.1}Motivation}{3}
+\contentsline {subsection}{\numberline {1.2}Relevant Algorithms}{3}
+\contentsline {section}{\numberline {2}Materials and Methods}{3}
+\contentsline {subsection}{\numberline {2.1}Environment}{3}
+\contentsline {subsection}{\numberline {2.2}Data Set}{3}
+\contentsline {subsection}{\numberline {2.3}Algorithms}{3}
+\contentsline {subsection}{\numberline {2.4}Additional Software}{3}
+\contentsline {subsection}{\numberline {2.5}Accuracy}{3}
+\contentsline {section}{\numberline {3}Results}{4}
+\contentsline {subsection}{\numberline {3.1}Accuracy}{4}
+\contentsline {subsubsection}{\numberline {3.1.1}Small RNA}{4}
+\contentsline {subsubsection}{\numberline {3.1.2}Moderate RNA}{4}
+\contentsline {subsubsection}{\numberline {3.1.3}Large RNA}{4}
+\contentsline {subsection}{\numberline {3.2}Time}{4}
+\contentsline {section}{\numberline {4}Discussion}{4}
+\contentsline {section}{\numberline {5}Conclusions}{4}
