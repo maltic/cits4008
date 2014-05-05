@@ -21,7 +21,7 @@
 
 
 %meta info
-\title{Beyond the Thermodynamic Hypothesis}
+\title{Algorithms for RNA folding}
 \author{Max Ward \\
 School of Computer Science \& Software Engineering \\
 The University of Western Australia}
@@ -66,8 +66,14 @@ Analysis of thermodynamically based algorithms for RNA structure prediction
 
 \section{Introduction}
 \subsection{Motivation}
-mention hypothesis at end, which is that new algorithms have improved accuracy over older algorithms. As a secondary supposition, they should scale no worse than older algorithms.
+Ribonucleic acid (RNA) is at the core of many biological processes. Traditionally is has been described as the messenger molecule of DNA, faithfully carrying the code for protein from DNA to the site of protein synthesis. However, in a recent landmark paper, Amaral et al. \cite{amaral2008eukaryotic} described our genome, and those of other eukaryotes, as being driven by an RNA machine. They noted that most of the eukaryote genome is transcribed into RNA, despite little of it coding for protein. It seems that much of our genome, originally called `junk DNA', codes for functional RNA molecules. These RNAs can interact with DNA, affecting gene expression. This allows DNA to essentially regulate itself. For example, Makeyev \& Maniati \cite{makeyev2008multilevel} reported that microRNAs affect the expression of genes by interfering with translation of protein. They also argued that microRNAs, and other regulatory RNAs, explain the vast differences between organisms with similar genomes. To put this idea into perspective, we share roughly 90\% of our genes with the domestic Cat \cite{pontius2007initial}. Mattick \cite{mattick2007new} has suggested that the process of development---from embryo to adult---is encoded in the interactions of such RNAs.
+
+A widely held axiom is that chemical structure is tantamount to biological function. With increasingly important biological functions being associated with RNA, it is important to be able to predict its structure. The purpose is this paper is to provide a survey of some widely used RNA structure prediction algorithms. In the interest of keeping this report succinct, I review only algorithms based on a conventional thermodynamically based model. Other algorithms often use machined learned, statistical parameters; these shall not be explored here. The Zuker algorithm was the first thermodynamic algorithm to achieve usable prediction accuracy, and it forms the basis for all the methods I shall thence discuss.
+
 \subsection{Relevant Algorithms}
+\subsubsection{The Zuker Algorithm}
+\subsubsection{Maximum Expected Accuracy}
+\subsubsection{Cotranscriptional folding}
 Explain in high level terms the three algorithms tested
 
 \section{Materials and Methods}
