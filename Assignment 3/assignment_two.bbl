@@ -1,14 +1,40 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{amaral2008eukaryotic}
 Paulo~P Amaral, Marcel~E Dinger, Tim~R Mercer, and John~S Mattick.
 \newblock The eukaryotic genome as an rna machine.
 \newblock {\em Science}, 319(5871):1787--1789, 2008.
 
+\bibitem{andronescu2008rna}
+Mirela Andronescu, Vera Bereg, Holger~H Hoos, and Anne Condon.
+\newblock Rna strand: the rna secondary structure and statistical analysis
+  database.
+\newblock {\em BMC bioinformatics}, 9(1):340, 2008.
+
+\bibitem{lorenz2011viennarna}
+Ronny Lorenz, Stephan~HF Bernhart, Christian~Hoener Zu~Siederdissen, Hakim
+  Tafer, Christoph Flamm, Peter~F Stadler, Ivo~L Hofacker, et~al.
+\newblock Viennarna package 2.0.
+\newblock {\em Algorithms for Molecular Biology}, 6(1):26, 2011.
+
 \bibitem{makeyev2008multilevel}
 Eugene~V Makeyev and Tom Maniatis.
 \newblock Multilevel regulation of gene expression by micrornas.
 \newblock {\em Science}, 319(5871):1789--1790, 2008.
+
+\bibitem{mathews2004incorporating}
+David~H Mathews, Matthew~D Disney, Jessica~L Childs, Susan~J Schroeder, Michael
+  Zuker, and Douglas~H Turner.
+\newblock Incorporating chemical modification constraints into a dynamic
+  programming algorithm for prediction of rna secondary structure.
+\newblock {\em Proceedings of the National Academy of Sciences of the United
+  States of America}, 101(19):7287--7292, 2004.
+
+\bibitem{mathews1999expanded}
+David~H Mathews, Jeffrey Sabina, Michael Zuker, and Douglas~H Turner.
+\newblock Expanded sequence dependence of thermodynamic parameters improves
+  prediction of rna secondary structure.
+\newblock {\em Journal of molecular biology}, 288(5):911--940, 1999.
 
 \bibitem{mattick2007new}
 John~S Mattick.
@@ -21,5 +47,23 @@ Joan~U Pontius, James~C Mullikin, Douglas~R Smith, Kerstin Lindblad-Toh, Sante
   Volfovsky, et~al.
 \newblock Initial sequence and comparative analysis of the cat genome.
 \newblock {\em Genome research}, 17(11):1675--1689, 2007.
+
+\bibitem{reuter2010rnastructure}
+Jessica~S Reuter and David~H Mathews.
+\newblock Rnastructure: software for rna secondary structure prediction and
+  analysis.
+\newblock {\em BMC bioinformatics}, 11(1):129, 2010.
+
+\bibitem{studnicka1978computer}
+Gary~M Studnicka, Georgia~M Rahn, Ian~W Cummings, and Winston~A Salser.
+\newblock Computer method for predicting the secondary structure of
+  single-stranded rna.
+\newblock {\em Nucleic acids research}, 5(9):3365--3388, 1978.
+
+\bibitem{zuker1981optimal}
+Michael Zuker and Patrick Stiegler.
+\newblock Optimal computer folding of large rna sequences using thermodynamics
+  and auxiliary information.
+\newblock {\em Nucleic acids research}, 9(1):133--148, 1981.
 
 \end{thebibliography}

@@ -72,23 +72,63 @@ A widely held axiom is that chemical structure is tantamount to biological funct
 
 \subsection{Relevant Algorithms}
 \subsubsection{The Zuker Algorithm}
+In 1981 Zuker \& Stiegler \cite{zuker1981optimal}
+described an algorithm that predicted RNA structure by minimizing molecular free energy. The lower free energy a molecule has, the more stable it is. This was done
+by introducing a number of thermodynamic rules for canonical substructures like hairpin loops, internal bulges, multiloops (also called bifurcation loops), unbonded bases, and stacked base pairs. For examples of these structures, refer to Figure \ref{fig:zuk_struct}. The Zuker algorithm uses a mutually recursive dynamic programming recurrence to achieve a relatively comprehensive scoring scheme. This is possible because RNA structures are nested, and hence substructures with minimum free energy need not be recomputed. It follows naturally that dynamic programming can then be used to find a global minimum. The thermodynamic scoring system is borrowed from the work of Studnicka et al. \cite{studnicka1978computer} who presented a
+complex but theoretically similar algorithm, albeit having
+much worse asymptotic and implementation complexity. 
+
+\begin{figure}
+\begin{center}
+\scalebox{0.27}{\includegraphics{figure4}}
+\end{center}
+\caption{Diagram of substructures used in the Zuker algorithm. On the left is a diagram of a RNA secondary structure. On the right is the same structure laid out on a semi-circle. Bonds are represented as lines crossing the semi-circle. Taken from original
+publication \cite{zuker1981optimal}.}
+\label{fig:zuk_struct}
+\end{figure}
+
+
+The algorithm of Zuker \& Stiegler \cite{zuker1981optimal} has some problems, however. Because there exist no experimentally determined energy formula for multiloops, the values found in the Zuker algorithm are guessed. Additionally, the size of possible multiloops is limited, otherwise the time complexity of the Zuker algorithm increases by an order of magnitude. With these concessions accounted for, the final time complexity of the Zuker algorithm is $O(n^3)$, where $n$ is the number of nucleotides in the RNA. The space complexity for the Zuker and algorithm is $O(n^2)$, this is due to the memory used by dynamic programming tables. In short, it is able to efficiently predict secondary structures for RNAs with hundreds of bases, on modern hardware. 
+
+Later, Matthews et al. \cite{mathews1999expanded} improved the standard thermodynamic model used by adding experimentally determined sequence dependencies. Then again in 2004, also by Matthews et al \cite{mathews2004incorporating}, this time by incorporating energy parameters for coaxial stacking of base pairs, and by refining previous parameters based on newer experiments. In both cases, the prediction accuracy of the Zuker algorithm was empirically improved. Because of
+its efficiency, robustness, and extensibility, this method is,
+even today, still the most popular available. The most widely used packages for RNA secondary structure prediction all contain implementations of the Zuker algorithm \cite{lorenz2011viennarna, reuter2010rnastructure}.
 \subsubsection{Maximum Expected Accuracy}
 \subsubsection{Cotranscriptional folding}
 Explain in high level terms the three algorithms tested
 
 \section{Materials and Methods}
-\subsection{Environment}
-How I tested it
+\subsection{Environment and Software}
+All software was run on the Debian 7.5 "wheezy" operating system using the default configuration. Debian was run on top of an Intel i7-4770k processor with 32 gigabytes of RAM. The GNU C Compiler (gcc) version 4.8.2 was used to compile all the required code. Though the processor used was multicore, OpenMP was disabled at compile time to prevent the use of multiple cores during testing. The source code for all the algorithms tested was compiled using makefiles provided as part of their source. The latest version of the Vienna RNA Suite (version 2.1.7, released April 13th 2014) was used as the reference implementation of the MEA algorithm and the Zuker algorithm. The RNAfold module in particular can be used to fold structures using the Zuker algorithm, or to produce a structure with maximum expected accuracy. The entire Vienna RNA Suite was compiled from source, then was linked as a static library at compile time for testing. The latest version of CoFold was downloaded from the CoFold webserver (ref). Because CoFold is based on an older version of RNAfold, it was compiled separately, and linked as a separate static library. In addition, the GNU Regression, Econometrics, and Time-series Library (also called `gretl') was used for all statistical tests, and to produce the graphics found in Section \ref{sec:results}.
+
 \subsection{Data Set}
-Strand stuff
-\subsection{Algorithms}
-Config and stuff
-\subsection{Additional Software}
-gretl etc
+The RNA secondary structures used to test algorithms presented in this paper were taken from the RNA STRAND database \cite{andronescu2008rna}. The RNA STRAND database is a free-to-use, curated collection of RNA secondary structures taken from various publicly available databases and publications. A subset of RNA structural data was extracted from the database. This subset contained only RNA structures that were marked having been verified using X-Ray crystallography, or nuclear magnetic resonance imaging. It also comprises only whole RNAs; none of the RNAs used were fragments or subsequences of larger RNA molecules. Finally, no duplicates were allowed in the selected set. Hereafter, I shall refer to this collection of RNA secondary structures as the `testing set'. The testing set contained 392 different RNA molecules ranging in length from 20 to 3032 nucleotides.
+
 \subsection{Accuracy}
-explain f score and why it is useful for us
+Well established procedures have been developed over
+the history of RNA structure prediction for comparing accuracy. Usually accuracy is determined by comparing predicted structures to known
+structures. True Positives ($TP$) is defined as the number of base pairs which appear in both the predicted structure and the actual structure. False Positives
+($FP$) is the number of predicted base pairs not in the true
+structure \cite{lorenz2011viennarna}. Similarly, False Negatives ($FN$) is defined as the number of base
+pairings in the reference structure but not present in the predicted structure \cite{lorenz2011viennarna}.
+Sensitivity, also called the True Positive Rate ($TPR$), can be defined using the previously introduced values. I have given a mathematical definition of the $TPR$ in Equation \ref{eq:tpr}.
+
+\begin{equation} \label{eq:tpr}
+ \frac{TP}{TP + FN}
+\end{equation}
+
+Precision, also known as Positive Predictive Value ($PPV$), can also be calculated
+using these values (see Equation \ref{eq:ppv}).
+
+
+\begin{equation} \label{eq:ppv}
+ \frac{TP}{TP + FP}
+\end{equation}
+
+For the results presented in this report the F-score was used as a measure of accuracy. F-score is defined as the harmonic mean of sensitivity and precision.
 
 \section{Results}
+\label{sec:results}
 \subsection{Accuracy}
 \subsubsection{Small RNA}
 \subsubsection{Moderate RNA}

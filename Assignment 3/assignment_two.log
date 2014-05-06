@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.26)  5 MAY 2014 13:24
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.26)  6 MAY 2014 10:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -230,28 +230,36 @@ Package caption Info: End \AtBeginDocument code.
 
  [2
 
-] [3
+] <figure4.png, id=14, 1482.53876pt x 677.53125pt>
+File: figure4.png Graphic file (type png)
 
-] (./assignment_two.bbl [4]) [5]
-(./assignment_two.aux) ) 
+<use figure4.png>
+Package pdftex.def Info: figure4.png used on input line 83.
+(pdftex.def)             Requested size: 1482.53516pt x 677.52959pt.
+ [3
+
+] [4 <./figure4.png>] [5] (./assignment_two.bbl [6])
+[7] (./assignment_two.aux) ) 
 Here is how much of TeX's memory you used:
- 3103 strings out of 493485
- 46307 string characters out of 3143526
- 106368 words of memory out of 3000000
- 6387 multiletter control sequences out of 15000+200000
+ 3122 strings out of 493485
+ 46620 string characters out of 3143526
+ 108423 words of memory out of 3000000
+ 6404 multiletter control sequences out of 15000+200000
  10888 words of font info for 39 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,6n,38p,1307b,207s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on assignment_two.pdf (5 pages, 88314 bytes).
+ 38i,6n,38p,1367b,296s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on assignment_two.pdf (7 pages, 416679 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
- 30 compressed objects within 1 object stream
+ 63 PDF objects out of 1000 (max. 8388607)
+ 43 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
