@@ -93,7 +93,10 @@ The algorithm of Zuker \& Stiegler \cite{zuker1981optimal} has some problems, ho
 Later, Matthews et al. \cite{mathews1999expanded} improved the standard thermodynamic model used by adding experimentally determined sequence dependencies. Then again in 2004, also by Matthews et al \cite{mathews2004incorporating}, this time by incorporating energy parameters for coaxial stacking of base pairs, and by refining previous parameters based on newer experiments. In both cases, the prediction accuracy of the Zuker algorithm was empirically improved. Because of
 its efficiency, robustness, and extensibility, this method is,
 even today, still the most popular available. The most widely used packages for RNA secondary structure prediction all contain implementations of the Zuker algorithm \cite{lorenz2011viennarna, reuter2010rnastructure}.
+
 \subsubsection{Maximum Expected Accuracy}
+The Maximum Expected Accuracy (MEA) technique for RNA prediction was first applied by Do, Woods \& Batzoglou as part of the CONTRAfold algorithm \cite{do2006contrafold}. The Zuker algorithm essentially finds the most likely structure under a thermodynamic model. An MEA prediction method is more compromising; it finds a structure containing the most probable set of bonds. This is done by computing the partition function for a given RNA, as described by McCaskil \cite{mccaskill1990equilibrium}. The partition function computation is achieved by a modified version of the Zuker algorithm, and can be done in $O(n^3)$ time. This partition function can be processed to produce a two dimensional matrix of base pairing probabilities. Each pair of indexes in the matrix represents the probability that the bases corresponding to those indexes will bond. Intuitively this represents the entire folding landscape of a RNA, rather than a single minimum free energy structure as computed by the Zuker algorithm. A MEA algorithm builds a structure by selecting bonds from this bond probability matrix. However, if the sum probability is naively maximized, it tends to produce structures with too many bonds. As such, a MEA algorithm must find a compromise between the number of bonds selected, and the total probability of the computed structure. Usually this is achieved by introducing some cut-off, or, in the case of CONTRAfold, a scaling factor.
+
 \subsubsection{Cotranscriptional folding}
 Explain in high level terms the three algorithms tested
 
@@ -125,7 +128,7 @@ using these values (see Equation \ref{eq:ppv}).
  \frac{TP}{TP + FP}
 \end{equation}
 
-For the results presented in this report the F-score was used as a measure of accuracy. F-score is defined as the harmonic mean of sensitivity and precision.
+For the results presented in this report, the F-score was used as a measure of accuracy. F-score is defined as the harmonic mean of sensitivity and precision. It provides a good balance between these two metrics.
 
 \section{Results}
 \label{sec:results}
@@ -135,9 +138,8 @@ For the results presented in this report the F-score was used as a measure of ac
 \subsubsection{Large RNA}
 \subsection{Time}
 
-\section{Discussion}
+\section{Discussion and Conclusions}
 
-\section{Conclusions}
 
 
 
