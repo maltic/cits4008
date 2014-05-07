@@ -3,44 +3,49 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: assignment_two.aux
 The style file: plain.bst
 Database file #1: assignment_two.bib
-You've used 11 entries,
+Repeated entry---line 532 of file assignment_two.bib
+ : @article{do2006contrafold
+ :                          ,
+I'm skipping whatever remains of this entry
+You've used 13 entries,
             2118 wiz_defined-function locations,
-            574 strings with 6436 characters,
-and the built_in function-call counts, 4436 in all, are:
-= -- 423
-> -- 272
+            591 strings with 6801 characters,
+and the built_in function-call counts, 5117 in all, are:
+= -- 494
+> -- 297
 < -- 0
-+ -- 109
-- -- 96
-* -- 393
-:= -- 768
-add.period$ -- 33
-call.type$ -- 11
-change.case$ -- 79
++ -- 120
+- -- 104
+* -- 448
+:= -- 880
+add.period$ -- 39
+call.type$ -- 13
+change.case$ -- 89
 chr.to.int$ -- 0
-cite$ -- 11
-duplicate$ -- 121
-empty$ -- 297
-format.name$ -- 96
-if$ -- 869
+cite$ -- 13
+duplicate$ -- 143
+empty$ -- 353
+format.name$ -- 104
+if$ -- 1007
 int.to.chr$ -- 0
-int.to.str$ -- 11
-missing$ -- 11
-newline$ -- 58
-num.names$ -- 22
-pop$ -- 57
+int.to.str$ -- 13
+missing$ -- 13
+newline$ -- 68
+num.names$ -- 26
+pop$ -- 63
 preamble$ -- 1
-purify$ -- 68
+purify$ -- 76
 quote$ -- 0
-skip$ -- 81
+skip$ -- 95
 stack$ -- 0
-substring$ -- 317
-swap$ -- 11
+substring$ -- 384
+swap$ -- 13
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 44
+type$ -- 52
 warning$ -- 0
-while$ -- 41
-width$ -- 13
-write$ -- 123
+while$ -- 49
+width$ -- 15
+write$ -- 145
+(There was 1 error message)

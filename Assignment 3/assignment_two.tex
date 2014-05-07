@@ -60,9 +60,9 @@ Analysis of thermodynamically based algorithms for RNA structure prediction
 
 \clearpage
 
-\tableofcontents
-\listoffigures
-\clearpage
+%\tableofcontents
+%\listoffigures
+%\clearpage
 
 \section{Introduction}
 \subsection{Motivation}
@@ -88,14 +88,12 @@ publication \cite{zuker1981optimal}.}
 \end{figure}
 
 
-The algorithm of Zuker \& Stiegler \cite{zuker1981optimal} has some problems, however. Because there exist no experimentally determined energy formula for multiloops, the values found in the Zuker algorithm are guessed. Additionally, the size of possible multiloops is limited, otherwise the time complexity of the Zuker algorithm increases by an order of magnitude. With these concessions accounted for, the final time complexity of the Zuker algorithm is $O(n^3)$, where $n$ is the number of nucleotides in the RNA. The space complexity for the Zuker and algorithm is $O(n^2)$, this is due to the memory used by dynamic programming tables. In short, it is able to efficiently predict secondary structures for RNAs with hundreds of bases, on modern hardware. 
-
-Later, Matthews et al. \cite{mathews1999expanded} improved the standard thermodynamic model used by adding experimentally determined sequence dependencies. Then again in 2004, also by Matthews et al \cite{mathews2004incorporating}, this time by incorporating energy parameters for coaxial stacking of base pairs, and by refining previous parameters based on newer experiments. In both cases, the prediction accuracy of the Zuker algorithm was empirically improved. Because of
+Later, Matthews et al. \cite{mathews1999expanded} improved the standard thermodynamic model used by adding experimentally determined sequence dependencies. Then again in 2004, also by Matthews et al \cite{mathews2004incorporating}, this time by incorporating energy parameters for coaxial stacking of base pairs, and by refining previous parameters based on newer experiments. In both cases, the prediction accuracy of the Zuker algorithm was empirically improved. Under all of these incrementally improving thermodynamic models, the time complexity of the Zuker algorithm is $O(n^3)$, where $n$ is the number of nucleotides in the RNA. The space complexity for the Zuker and algorithm is $O(n^2)$, this is due to the memory used by dynamic programming tables. In short, it is able to efficiently predict secondary structures for RNAs with hundreds of bases, on modern hardware.  Because of
 its efficiency, robustness, and extensibility, this method is,
 even today, still the most popular available. The most widely used packages for RNA secondary structure prediction all contain implementations of the Zuker algorithm \cite{lorenz2011viennarna, reuter2010rnastructure}.
 
 \subsubsection{Maximum Expected Accuracy}
-The Maximum Expected Accuracy (MEA) technique for RNA prediction was first applied by Do, Woods \& Batzoglou as part of the CONTRAfold algorithm \cite{do2006contrafold}. The Zuker algorithm essentially finds the most likely structure under a thermodynamic model. An MEA prediction method is more compromising; it finds a structure containing the most probable set of bonds. This is done by computing the partition function for a given RNA, as described by McCaskil \cite{mccaskill1990equilibrium}. The partition function computation is achieved by a modified version of the Zuker algorithm, and can be done in $O(n^3)$ time. This partition function can be processed to produce a two dimensional matrix of base pairing probabilities. Each pair of indexes in the matrix represents the probability that the bases corresponding to those indexes will bond. Intuitively this represents the entire folding landscape of a RNA, rather than a single minimum free energy structure as computed by the Zuker algorithm. A MEA algorithm builds a structure by selecting bonds from this bond probability matrix. However, if the sum probability is naively maximized, it tends to produce structures with too many bonds. As such, a MEA algorithm must find a compromise between the number of bonds selected, and the total probability of the computed structure. Usually this is achieved by introducing some cut-off, or, in the case of CONTRAfold, a scaling factor.
+The Maximum Expected Accuracy (MEA) technique for RNA prediction was first applied by Do, Woods \& Batzoglou as part of the CONTRAfold algorithm \cite{do2006contrafold}. The Zuker algorithm essentially finds the most likely structure under a thermodynamic model. An MEA prediction method is more compromising; it finds a structure containing the most probable set of bonds. This is done by computing the partition function for a RNA, as described by McCaskil \cite{mccaskill1990equilibrium}. The partition function computation is achieved by a modified version of the Zuker algorithm, and can be done in $O(n^3)$ time. It should be noted that the this computation uses the underlying thermodynamic model of the Zuker algorithm. This partition function can be processed to produce a two dimensional matrix of base pairing probabilities. Each pair of indexes in the matrix represents the probability that the bases corresponding to those indexes will bond. Intuitively this represents the entire folding landscape of a RNA, rather than a single minimum free energy structure as computed by the Zuker algorithm. A MEA algorithm builds a structure by selecting bonds from this bond probability matrix. However, if the sum probability is naively maximized, it tends to produce structures with too many bonds. As such, a MEA algorithm must find a compromise between the number of bonds selected, and the total probability of the computed structure. Usually this is achieved by introducing some cut-off value, or, in the case of CONTRAfold, a scaling factor.
 
 \subsubsection{Cotranscriptional folding}
 Explain in high level terms the three algorithms tested
@@ -133,6 +131,67 @@ For the results presented in this report, the F-score was used as a measure of a
 \section{Results}
 \label{sec:results}
 \subsection{Accuracy}
+
+\begin{figure}
+\begin{center}
+\scalebox{0.7}{\includegraphics{boxplots}}
+\end{center}
+\caption{Box plots depicting the spread of F-scores for RNAfold, MEA, and CoFold.}
+\label{fig:boxplots}
+\end{figure}
+
+
+\begin{table}
+\centering
+\begin{tabular}{l*{6}{c}r}
+Algorithm	& Mean & Median & Std. Dev. \\
+\hline
+RNAfold &  0.574834    &    0.608696 & 0.341977   \\
+MEA & 0.564584    &    0.615385  & 0.346070\\
+CoFold & 0.580802  &     0.608696 & 0.337973  \\
+\end{tabular}
+\caption{Summary statistics for the F-scores of RNAfold, MEA, and CoFold.}
+\label{tab:summarystats}
+\end{table}
+
+
+\begin{table}
+\centering
+\begin{tabular}{l*{6}{c}r}
+Algorithms	& $z$-value & P-value \\
+\hline 
+MEA \& CoFold &  -0.225675    &    0.410727   \\
+RNAfold \& CoFold &  -0.85571    &    0.196079  \\
+RNAfold \& MEA &  -0.790628    &    0.214581  \\
+\end{tabular}
+\caption{The results of Wilcoxon Signed-rank tests between RNAfold, MEA, and CoFold. The $z$-value indicates the magnitude of difference between F-scores. The P-value indicates statistical significance.}
+\label{tab:wilcoxon}
+\end{table}
+
+
+\begin{figure}
+\begin{center}
+\scalebox{0.8}{\includegraphics{timegraph}}
+\end{center}
+\caption{Here the recorded run time for RNAfold, MEA, and CoFold is depicted as a scatter plot. The time used by all algorithms increases with increasing RNA length. The length of an RNA is defined as the number of nucleotides it compromises. A purple line representing a generic cubic curve is included for comparison. This line has been scaled by a constant so that it remains visible on the diagram.}
+\label{fig:timegraph}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+\scalebox{0.8}{\includegraphics{timegraphsmall}}
+\end{center}
+\caption{Here the recorded run time for only smaller RNAs ($< 400$ nucleotides) is depicted as a scatter plot. A purple line representing a generic cubic curve is included for comparison. This line has been scaled by a constant so that it remains visible on the diagram.}
+\label{fig:timegraphsmall}
+\end{figure}
+
+
+
+
+
+
+
 \subsubsection{Small RNA}
 \subsubsection{Moderate RNA}
 \subsubsection{Large RNA}

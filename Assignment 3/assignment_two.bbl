@@ -11,6 +11,12 @@ Mirela Andronescu, Vera Bereg, Holger~H Hoos, and Anne Condon.
   database.
 \newblock {\em BMC bioinformatics}, 9(1):340, 2008.
 
+\bibitem{do2006contrafold}
+Chuong~B Do, Daniel~A Woods, and Serafim Batzoglou.
+\newblock Contrafold: Rna secondary structure prediction without physics-based
+  models.
+\newblock {\em Bioinformatics}, 22(14):e90--e98, 2006.
+
 \bibitem{lorenz2011viennarna}
 Ronny Lorenz, Stephan~HF Bernhart, Christian~Hoener Zu~Siederdissen, Hakim
   Tafer, Christoph Flamm, Peter~F Stadler, Ivo~L Hofacker, et~al.
@@ -40,6 +46,12 @@ David~H Mathews, Jeffrey Sabina, Michael Zuker, and Douglas~H Turner.
 John~S Mattick.
 \newblock A new paradigm for developmental biology.
 \newblock {\em Journal of Experimental Biology}, 210(9):1526--1547, 2007.
+
+\bibitem{mccaskill1990equilibrium}
+John~S McCaskill.
+\newblock The equilibrium partition function and base pair binding
+  probabilities for rna secondary structure.
+\newblock {\em Biopolymers}, 29(6-7):1105--1119, 1990.
 
 \bibitem{pontius2007initial}
 Joan~U Pontius, James~C Mullikin, Douglas~R Smith, Kerstin Lindblad-Toh, Sante
