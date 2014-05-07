@@ -54,7 +54,7 @@ Analysis of thermodynamically based algorithms for RNA structure prediction
 \end{abstract}
 
 
-{\bf Keywords:} Ribonucleic acid, structure, prediction, thermodynamic hypothesis.
+{\bf Keywords:} Ribonucleic acid, structure, prediction, empirical, comparison.
 
 {\bf CR Classification:} J.3 Biology and genetics.
 
@@ -68,7 +68,7 @@ Analysis of thermodynamically based algorithms for RNA structure prediction
 \subsection{Motivation}
 Ribonucleic acid (RNA) is at the core of many biological processes. Traditionally is has been described as the messenger molecule of DNA, faithfully carrying the code for protein from DNA to the site of protein synthesis. However, in a recent landmark paper, Amaral et al. \cite{amaral2008eukaryotic} described our genome, and those of other eukaryotes, as being driven by an RNA machine. They noted that most of the eukaryote genome is transcribed into RNA, despite little of it coding for protein. It seems that much of our genome, originally called `junk DNA', codes for functional RNA molecules. These RNAs can interact with DNA, affecting gene expression. This allows DNA to essentially regulate itself. For example, Makeyev \& Maniati \cite{makeyev2008multilevel} reported that microRNAs affect the expression of genes by interfering with translation of protein. They also argued that microRNAs, and other regulatory RNAs, explain the vast differences between organisms with similar genomes. To put this idea into perspective, we share roughly 90\% of our genes with the domestic Cat \cite{pontius2007initial}. Mattick \cite{mattick2007new} has suggested that the process of development---from embryo to adult---is encoded in the interactions of such RNAs.
 
-A widely held axiom is that chemical structure is tantamount to biological function. With increasingly important biological functions being associated with RNA, it is important to be able to predict its structure. The purpose is this paper is to provide a survey of some widely used RNA structure prediction algorithms. In the interest of keeping this report succinct, I review only algorithms based on a conventional thermodynamically based model. Other algorithms often use machined learned, statistical parameters; these shall not be explored here. The Zuker algorithm was the first thermodynamic algorithm to achieve usable prediction accuracy, and it forms the basis for all the methods I shall thence discuss.
+A widely held axiom is that chemical structure is tantamount to biological function. With increasingly important biological functions being associated with RNA, it is important to be able to predict its structure. The purpose is this paper is to provide a survey of some widely used RNA structure prediction algorithms. In the interest of keeping this report succinct, I review only algorithms based on a conventional thermodynamically based model. Other algorithms often use machined learned, statistical parameters; these shall not be explored here. In essence, all the algorithms I test take a single RNA primary sequence as input, and return a predicted secondary structure. I hypothesize that newer algorithms should have improved accuracy as compared to older algorithms. In addition, I aim to empirically verify the time complexities of my chosen algorithms. The Zuker algorithm was the first thermodynamic algorithm to achieve usable prediction accuracy, and it forms the basis for all the methods I shall thence discuss.
 
 \subsection{Relevant Algorithms}
 \subsubsection{The Zuker Algorithm}
@@ -76,7 +76,9 @@ In 1981 Zuker \& Stiegler \cite{zuker1981optimal}
 described an algorithm that predicted RNA structure by minimizing molecular free energy. The lower free energy a molecule has, the more stable it is. This was done
 by introducing a number of thermodynamic rules for canonical substructures like hairpin loops, internal bulges, multiloops (also called bifurcation loops), unbonded bases, and stacked base pairs. For examples of these structures, refer to Figure \ref{fig:zuk_struct}. The Zuker algorithm uses a mutually recursive dynamic programming recurrence to achieve a relatively comprehensive scoring scheme. This is possible because RNA structures are nested, and hence substructures with minimum free energy need not be recomputed. It follows naturally that dynamic programming can then be used to find a global minimum. The thermodynamic scoring system is borrowed from the work of Studnicka et al. \cite{studnicka1978computer} who presented a
 complex but theoretically similar algorithm, albeit having
-much worse asymptotic and implementation complexity. 
+much worse asymptotic and implementation complexity. It was then later improved by Matthews et al. \cite{mathews1999expanded, mathews2004incorporating}. The time complexity of the Zuker algorithm is $O(n^3)$, where $n$ is the number of nucleotides in the RNA. In short, it is able to efficiently predict secondary structures for RNAs with hundreds of bases, on modern hardware.  Because of
+its efficiency, robustness, and extensibility, this method is,
+even today, still the most popular available. The most widely used packages for RNA secondary structure prediction all contain implementations of the Zuker algorithm \cite{lorenz2011viennarna, reuter2010rnastructure}.
 
 \begin{figure}
 \begin{center}
@@ -87,13 +89,8 @@ publication \cite{zuker1981optimal}.}
 \label{fig:zuk_struct}
 \end{figure}
 
-
-Later, Matthews et al. \cite{mathews1999expanded} improved the standard thermodynamic model used by adding experimentally determined sequence dependencies. Then again in 2004, also by Matthews et al \cite{mathews2004incorporating}, this time by incorporating energy parameters for coaxial stacking of base pairs, and by refining previous parameters based on newer experiments. In both cases, the prediction accuracy of the Zuker algorithm was empirically improved. Under all of these incrementally improving thermodynamic models, the time complexity of the Zuker algorithm is $O(n^3)$, where $n$ is the number of nucleotides in the RNA. The space complexity for the Zuker and algorithm is $O(n^2)$, this is due to the memory used by dynamic programming tables. In short, it is able to efficiently predict secondary structures for RNAs with hundreds of bases, on modern hardware.  Because of
-its efficiency, robustness, and extensibility, this method is,
-even today, still the most popular available. The most widely used packages for RNA secondary structure prediction all contain implementations of the Zuker algorithm \cite{lorenz2011viennarna, reuter2010rnastructure}.
-
 \subsubsection{Maximum Expected Accuracy}
-The Maximum Expected Accuracy (MEA) technique for RNA prediction was first applied by Do, Woods \& Batzoglou as part of the CONTRAfold algorithm \cite{do2006contrafold}. The Zuker algorithm essentially finds the most likely structure under a thermodynamic model. An MEA prediction method is more compromising; it finds a structure containing the most probable set of bonds. This is done by computing the partition function for a RNA, as described by McCaskil \cite{mccaskill1990equilibrium}. The partition function computation is achieved by a modified version of the Zuker algorithm, and can be done in $O(n^3)$ time. It should be noted that the this computation uses the underlying thermodynamic model of the Zuker algorithm. This partition function can be processed to produce a two dimensional matrix of base pairing probabilities. Each pair of indexes in the matrix represents the probability that the bases corresponding to those indexes will bond. Intuitively this represents the entire folding landscape of a RNA, rather than a single minimum free energy structure as computed by the Zuker algorithm. A MEA algorithm builds a structure by selecting bonds from this bond probability matrix. However, if the sum probability is naively maximized, it tends to produce structures with too many bonds. As such, a MEA algorithm must find a compromise between the number of bonds selected, and the total probability of the computed structure. Usually this is achieved by introducing some cut-off value, or, in the case of CONTRAfold, a scaling factor.
+The Maximum Expected Accuracy (MEA) technique for RNA prediction was first applied by Do, Woods \& Batzoglou as part of the CONTRAfold algorithm \cite{do2006contrafold} in 2006, and is newer than the Zuker method. The Zuker algorithm essentially finds the most likely structure under a thermodynamic model. A MEA prediction method is more compromising; it finds a structure containing the most probable set of bonds. This is done by computing the partition function for a RNA, as described by McCaskil \cite{mccaskill1990equilibrium}. The partition function computation is achieved by a modified version of the Zuker algorithm, and can be done in $O(n^3)$ time. It should be noted that the this computation uses the underlying thermodynamic model of the Zuker algorithm. This partition function can be processed to produce a two dimensional matrix of base pairing probabilities. Each pair of indexes in the matrix represents the probability that the bases corresponding to those indexes will bond. Intuitively this represents the entire folding landscape of a RNA, rather than a single minimum free energy structure as computed by the Zuker algorithm. A MEA algorithm builds a structure by selecting bonds from this bond probability matrix. However, if the sum probability is naively maximized, it tends to produce structures with too many bonds. As such, a MEA algorithm must find a compromise between the number of bonds selected, and the total probability of the computed structure. Usually this is achieved by introducing some cut-off value, or, in the case of CONTRAfold, a scaling factor.
 
 \subsubsection{Cotranscriptional folding}
 Explain in high level terms the three algorithms tested
@@ -164,7 +161,21 @@ MEA \& CoFold &  -0.225675    &    0.410727   \\
 RNAfold \& CoFold &  -0.85571    &    0.196079  \\
 RNAfold \& MEA &  -0.790628    &    0.214581  \\
 \end{tabular}
-\caption{The results of Wilcoxon Signed-rank tests between RNAfold, MEA, and CoFold. The $z$-value indicates the magnitude of difference between F-scores. The P-value indicates statistical significance.}
+\caption{The results of Wilcoxon Signed-rank tests between RNAfold, MEA, and CoFold. The $z$-value indicates the magnitude of difference between population F-scores. The P-value indicates statistical significance.}
+\label{tab:wilcoxon}
+\end{table}
+
+
+\begin{table}
+\centering
+\begin{tabular}{l*{6}{c}r}
+Algorithms	& $z$-value & P-value \\
+\hline 
+MEA \& CoFold &  -0.97557    &    0.164639   \\
+RNAfold \& CoFold &  -0.284113    &    0.388162  \\
+RNAfold \& MEA &  0.290959   &    0.385541  \\
+\end{tabular}
+\caption{The results of Wilcoxon Signed-rank tests between RNAfold, MEA, and CoFold for only RNA with length $\geq 500$. The $z$-value indicates the magnitude of difference between population F-scores. The P-value indicates statistical significance.}
 \label{tab:wilcoxon}
 \end{table}
 
