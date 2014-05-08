@@ -90,14 +90,14 @@ publication \cite{zuker1981optimal}.}
 \end{figure}
 
 \subsubsection{Maximum Expected Accuracy}
-The Maximum Expected Accuracy (MEA) technique for RNA prediction was first applied by Do, Woods \& Batzoglou as part of the CONTRAfold algorithm \cite{do2006contrafold} in 2006, and is newer than the Zuker method. The Zuker algorithm essentially finds the most likely structure under a thermodynamic model. A MEA prediction method is more compromising; it finds a structure containing the most probable set of bonds. This is done by computing the partition function for a RNA, as described by McCaskil \cite{mccaskill1990equilibrium}. The partition function computation is achieved by a modified version of the Zuker algorithm, and can be done in $O(n^3)$ time. It should be noted that the this computation uses the underlying thermodynamic model of the Zuker algorithm. This partition function can be processed to produce a two dimensional matrix of base pairing probabilities. Each pair of indexes in the matrix represents the probability that the bases corresponding to those indexes will bond. Intuitively this represents the entire folding landscape of a RNA, rather than a single minimum free energy structure as computed by the Zuker algorithm. A MEA algorithm builds a structure by selecting bonds from this bond probability matrix. However, if the sum probability is naively maximized, it tends to produce structures with too many bonds. As such, a MEA algorithm must find a compromise between the number of bonds selected, and the total probability of the computed structure. Usually this is achieved by introducing some cut-off value, or, in the case of CONTRAfold, a scaling factor.
+The Maximum Expected Accuracy (MEA) technique for RNA prediction was first applied by Do, Woods \& Batzoglou as part of the CONTRAfold algorithm \cite{do2006contrafold} in 2006, and is newer than the Zuker method. This was the second class of algorithm I tested. The Zuker algorithm essentially finds the most likely structure under a thermodynamic model. A MEA prediction method is more compromising; it finds a structure containing the most probable set of bonds. This is done by computing the partition function for a RNA, as described by McCaskil \cite{mccaskill1990equilibrium}. The partition function computation is achieved by a modified version of the Zuker algorithm, and can be done in $O(n^3)$ time. It should be noted that the this computation uses the underlying thermodynamic model of the Zuker algorithm. This partition function can be processed to produce a two dimensional matrix of base pairing probabilities. Each pair of indexes in the matrix represents the probability that the bases corresponding to those indexes will bond. Intuitively this represents the entire folding landscape of a RNA, rather than a single minimum free energy structure as computed by the Zuker algorithm. A MEA algorithm builds a structure by selecting bonds from this bond probability matrix. However, if the sum probability is naively maximized, it tends to produce structures with too many bonds. As such, a MEA algorithm must find a compromise between the number of bonds selected, and the total probability of the computed structure. Usually this is achieved by introducing some cut-off value, or, in the case of CONTRAfold, a scaling factor.
 
-\subsubsection{Cotranscriptional folding}
-Explain in high level terms the three algorithms tested
+\subsubsection{Cotranscriptional Folding}
+There is compelling evidence that RNA structures form during transcription. Put simply, this means that RNA structures begin to form before the molecule has been fully assembled. This thesis is called `cotranscriptional folding'. Kramer \& Mills \cite{kramer1981secondary} reported seeing preliminary secondary structures form, break apart, and reform into other structures during transcription. Over a decade later Morgan \& Higgs \cite{morgan1996evidence} examined many RNA molecules and found that typical structures had suboptimal free energy. They postulated that this was due to cotranscriptional folding. Recently, Proctor \& Meyer \cite{proctor2013cofold} purportedly improved secondary structure perdition accuracy by simulating cotranscriptional folding in an algorithm they called `CoFold'. The effects of cotranscriptional interactions were captured using a scaling function in which closer nucleotides are weighted higher than distant nucleotides. Proctor \& Meyer \cite{proctor2013cofold} reported that this improved prediction accuracy; particularly for RNA molecules comprising greater than 1000 nucleotides. CoFold extends the Zuker algorithm by injecting the aforementioned scaling function into the recurrence relation. As such, it also has a $O(n^3)$ time complexity. CoFold was the third algorithm chosen for testing.
 
 \section{Materials and Methods}
 \subsection{Environment and Software}
-All software was run on the Debian 7.5 "wheezy" operating system using the default configuration. Debian was run on top of an Intel i7-4770k processor with 32 gigabytes of RAM. The GNU C Compiler (gcc) version 4.8.2 was used to compile all the required code. Though the processor used was multicore, OpenMP was disabled at compile time to prevent the use of multiple cores during testing. The source code for all the algorithms tested was compiled using makefiles provided as part of their source. The latest version of the Vienna RNA Suite (version 2.1.7, released April 13th 2014) was used as the reference implementation of the MEA algorithm and the Zuker algorithm. The RNAfold module in particular can be used to fold structures using the Zuker algorithm, or to produce a structure with maximum expected accuracy. The entire Vienna RNA Suite was compiled from source, then was linked as a static library at compile time for testing. The latest version of CoFold was downloaded from the CoFold webserver (ref). Because CoFold is based on an older version of RNAfold, it was compiled separately, and linked as a separate static library. In addition, the GNU Regression, Econometrics, and Time-series Library (also called `gretl') was used for all statistical tests, and to produce the graphics found in Section \ref{sec:results}.
+All software was run on the Debian 7.5 "wheezy" operating system using the default configuration. Debian was run on top of an Intel i7-4770k processor with 32 gigabytes of RAM. The GNU C Compiler (gcc) version 4.8.2 was used to compile all the required code. Though the processor used was multicore, OpenMP was disabled at compile time to prevent the use of multiple cores during testing. The source code for all the algorithms tested was compiled using makefiles provided as part of their source. The latest version of the Vienna RNA Suite (version 2.1.7, released April 13th 2014) was used as the reference implementation of the MEA algorithm and the Zuker algorithm. This was because it contains widely used versions of both. The entire Vienna RNA Suite was compiled from source, then was linked as a static library at compile time for testing. The latest version of CoFold was downloaded from the CoFold webserver (ref). Because CoFold is based on an older version of RNAfold, it was compiled separately, and linked as a separate static library. In addition, the GNU Regression, Econometrics, and Time-series Library (also called `gretl') was used for all statistical tests, and to produce the graphics found in Section \ref{sec:results}.
 
 \subsection{Data Set}
 The RNA secondary structures used to test algorithms presented in this paper were taken from the RNA STRAND database \cite{andronescu2008rna}. The RNA STRAND database is a free-to-use, curated collection of RNA secondary structures taken from various publicly available databases and publications. A subset of RNA structural data was extracted from the database. This subset contained only RNA structures that were marked having been verified using X-Ray crystallography, or nuclear magnetic resonance imaging. It also comprises only whole RNAs; none of the RNAs used were fragments or subsequences of larger RNA molecules. Finally, no duplicates were allowed in the selected set. Hereafter, I shall refer to this collection of RNA secondary structures as the `testing set'. The testing set contained 392 different RNA molecules ranging in length from 20 to 3032 nucleotides.
@@ -128,6 +128,7 @@ For the results presented in this report, the F-score was used as a measure of a
 \section{Results}
 \label{sec:results}
 \subsection{Accuracy}
+To compare the accuracy of my three chosen algorithms, I ran each of them using the testing set as input. The structures computed by each algorithm were then compared to the actual, experimentally determined structures for the corresponding RNAs, and an F-score was computed. A summary of the recorded F-scores is shown graphically in Figure \ref{fig:boxplots}. In addition, summary statistics can be found in Table \ref{tab:summarystats}. A more fine grained comparison was achieved by using the Wilcoxon signed-rank test. This statistical test was chosen over the more standard t-test because the data was not normally distributed, and the Wilcoxon signed-rank test is less sensitive to non-parametric variables. A Wilcoxon signed-rank test compares the difference between samples from the same population. In our case, the sample refers to the algorithm used, and the population is the testing set, which was the same for all algorithms. Hence the assumptions of the test are satisfied. The test was run to compare each pair of algorithms. A summary of these results can be found in Table \ref{tab:wilcoxon}. Becuase none of the results were statistically significant ($p > 0.05$), we cannot reject the null hypothesis of the Wilcoxon signed-rank test. Specifically, the null hypothesis is that any difference in the compared samples is due to chance. To test the claim that CoFold is more accurate for larger RNA, the Wilcoxon signed-ranks test was repeated for only RNAs larger than 1000 nucleotides. Again the results were not statistically significant ($p > 0.05$), and the null hypothesis can be safely rejected (see Table \ref{tab:wilcoxon_large}).
 
 \begin{figure}
 \begin{center}
@@ -155,13 +156,12 @@ CoFold & 0.580802  &     0.608696 & 0.337973  \\
 \begin{table}
 \centering
 \begin{tabular}{l*{6}{c}r}
-Algorithms	& $z$-value & P-value \\
+Algorithms	& $z$-value & $p$-value \\
 \hline 
 MEA \& CoFold &  -0.225675    &    0.410727   \\
 RNAfold \& CoFold &  -0.85571    &    0.196079  \\
-RNAfold \& MEA &  -0.790628    &    0.214581  \\
 \end{tabular}
-\caption{The results of Wilcoxon Signed-rank tests between RNAfold, MEA, and CoFold. The $z$-value indicates the magnitude of difference between population F-scores. The P-value indicates statistical significance.}
+\caption{The results of Wilcoxon signed-rank tests for CoFold versus other algorithms using only RNA $> 1000$ nucleotides in length. The $z$-value indicates the magnitude of difference between population F-scores. The $p$-value indicates statistical significance.}
 \label{tab:wilcoxon}
 \end{table}
 
@@ -175,9 +175,12 @@ MEA \& CoFold &  -0.97557    &    0.164639   \\
 RNAfold \& CoFold &  -0.284113    &    0.388162  \\
 RNAfold \& MEA &  0.290959   &    0.385541  \\
 \end{tabular}
-\caption{The results of Wilcoxon Signed-rank tests between RNAfold, MEA, and CoFold for only RNA with length $\geq 500$. The $z$-value indicates the magnitude of difference between population F-scores. The P-value indicates statistical significance.}
-\label{tab:wilcoxon}
+\caption{The results of Wilcoxon signed-rank tests between RNAfold, MEA, and CoFold for only RNA with length $\geq 1000$. The $z$-value indicates the magnitude of difference between population F-scores. The P-value indicates statistical significance.}
+\label{tab:wilcoxon_large}
 \end{table}
+
+
+\subsection{Time}
 
 
 \begin{figure}
@@ -196,17 +199,6 @@ RNAfold \& MEA &  0.290959   &    0.385541  \\
 \caption{Here the recorded run time for only smaller RNAs ($< 400$ nucleotides) is depicted as a scatter plot. A purple line representing a generic cubic curve is included for comparison. This line has been scaled by a constant so that it remains visible on the diagram.}
 \label{fig:timegraphsmall}
 \end{figure}
-
-
-
-
-
-
-
-\subsubsection{Small RNA}
-\subsubsection{Moderate RNA}
-\subsubsection{Large RNA}
-\subsection{Time}
 
 \section{Discussion and Conclusions}
 

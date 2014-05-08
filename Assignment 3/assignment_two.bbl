@@ -17,6 +17,11 @@ Chuong~B Do, Daniel~A Woods, and Serafim Batzoglou.
   models.
 \newblock {\em Bioinformatics}, 22(14):e90--e98, 2006.
 
+\bibitem{kramer1981secondary}
+Fred~Russell Kramer and Donald~R Mills.
+\newblock Secondary structure formation during rna synthesis.
+\newblock {\em Nucleic acids research}, 9(19):5109--5124, 1981.
+
 \bibitem{lorenz2011viennarna}
 Ronny Lorenz, Stephan~HF Bernhart, Christian~Hoener Zu~Siederdissen, Hakim
   Tafer, Christoph Flamm, Peter~F Stadler, Ivo~L Hofacker, et~al.
@@ -53,12 +58,23 @@ John~S McCaskill.
   probabilities for rna secondary structure.
 \newblock {\em Biopolymers}, 29(6-7):1105--1119, 1990.
 
+\bibitem{morgan1996evidence}
+Steven~R Morgan and Paul~G Higgs.
+\newblock Evidence for kinetic effects in the folding of large rna molecules.
+\newblock {\em The Journal of chemical physics}, 105(16):7152--7157, 1996.
+
 \bibitem{pontius2007initial}
 Joan~U Pontius, James~C Mullikin, Douglas~R Smith, Kerstin Lindblad-Toh, Sante
   Gnerre, Michele Clamp, Jean Chang, Robert Stephens, Beena Neelam, Natalia
   Volfovsky, et~al.
 \newblock Initial sequence and comparative analysis of the cat genome.
 \newblock {\em Genome research}, 17(11):1675--1689, 2007.
+
+\bibitem{proctor2013cofold}
+Jeff~R Proctor and Irmtraud~M Meyer.
+\newblock Cofold: an rna secondary structure prediction method that takes
+  co-transcriptional folding into account.
+\newblock {\em Nucleic acids research}, 41(9):e102--e102, 2013.
 
 \bibitem{reuter2010rnastructure}
 Jessica~S Reuter and David~H Mathews.
