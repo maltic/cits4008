@@ -14,7 +14,7 @@
 \setlength{\leftmargin}{0.5cm}
 \setlength{\rightmargin}{0.5cm}
 \setlength{\textheight}{24.00cm} 
-\setlength{\textwidth}{15.00cm}
+\setlength{\textwidth}{15.0cm}
 \parindent 0pt
 \parskip 5pt
 \pagestyle{plain}
@@ -182,7 +182,6 @@ RNAfold \& MEA &  0.290959   &    0.385541  \\
 
 \subsection{Time}
 
-
 \begin{figure}
 \begin{center}
 \scalebox{0.8}{\includegraphics{timegraph}}
@@ -200,8 +199,16 @@ RNAfold \& MEA &  0.290959   &    0.385541  \\
 \label{fig:timegraphsmall}
 \end{figure}
 
-\section{Discussion and Conclusions}
+One of the aims of this investigation was to validate the time complexity claims of the chosen algorithms. All tested algorithms have a claimed worst case time complexity of $O(n^3)$ where $n$ is the length of the input RNA sequence. To test this, all algorithms were run using RNAs in the testing set as input. Only the time used by the algorithm was recorded, input, output, and configuration were not measured. The recorded times are presented in Figure \ref{fig:timegraph}. Because the testing set contained a large range of data, I have also included Figure \ref{fig:timegraphsmall}. This is so that run-times for smaller RNAs can be seen clearly.
 
+
+
+\section{Discussion and Conclusions}
+I have made the conjecture that newer algorithms should be more accurate at predicting RNA structures. The algorithms I have tested, in decreasing order of age, were the Zuker algorithm, MEA based algorithms, and CoFold. I ran several statistical tests to compare the F-scores these algorithms. In every test, no statistically significant difference was found. There are only two reasonable conclusions, that the testing set was insufficiently large, or that no algorithm is significantly more accurate than the others. The testing set was large (392 RNAs), and varied, with many different classes of RNAs represented. As such, I submit that there is little difference in the predictive power of the algorithms tested. Unfortunately I was only able to test a very sparse collection of RNA prediction algorithms. Having said this, the Zuker algorithm and MEA based techniques are widely used, and are probably the most well known techniques. Additionally CoFold is a new algorithm, and represents state-of-the-art. As such, I also submit that my findings are relevant to both research and practice. Nonetheless, further investigations should use a larger collection of algorithms, and implementations. Stochastic context free grammar based methods in particular show promise. Furthermore, if a larger testing set is available, it should be used.
+
+A secondary goal of this investigation was to test the time requirements of the selected algorithms. While MEA and CoFold appear to have much larger constant factors compared to RNAfold, they all have a curve that is visibly cubic. This supports their claims of asymptotic complexity. The Zuker algorithm has had decades of optimization, and the RNAfold implementation in particular is well optimized. As such, this may be partly an optimization discrepancy. A more detailed investigation might compare naive and optimized implementations of RNA folding algorithms.
+
+I had supposed that one would see a progression of accuracy with newer algorithms. This was not the case. Despite this, increasingly large constant factors are evident in newer algorithms. These findings should constitute compelling evidence that little progress is being made in algorithmic RNA prediction. Unfortunately, it is becoming increasing clear that RNA has a complex and fundamental role in biology. For the time being, the best algorithm I tested was the Zuker algorithm as implemented in RNAfold. It provides the best balance between predictive power and run-time efficiency. However, better algorithms are an excellent direction for future research.
 
 
 
