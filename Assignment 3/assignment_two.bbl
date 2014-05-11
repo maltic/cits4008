@@ -22,6 +22,10 @@ Fred~Russell Kramer and Donald~R Mills.
 \newblock Secondary structure formation during rna synthesis.
 \newblock {\em Nucleic acids research}, 9(19):5109--5124, 1981.
 
+\bibitem{lorenz2014online}
+Ronny Lorenz.
+\newblock Viennarna package {@ONLINE}, May 2014.
+
 \bibitem{lorenz2011viennarna}
 Ronny Lorenz, Stephan~HF Bernhart, Christian~Hoener Zu~Siederdissen, Hakim
   Tafer, Christoph Flamm, Peter~F Stadler, Ivo~L Hofacker, et~al.
@@ -69,6 +73,10 @@ Joan~U Pontius, James~C Mullikin, Douglas~R Smith, Kerstin Lindblad-Toh, Sante
   Volfovsky, et~al.
 \newblock Initial sequence and comparative analysis of the cat genome.
 \newblock {\em Genome research}, 17(11):1675--1689, 2007.
+
+\bibitem{cofold2014online}
+Jeff Proctor.
+\newblock Cofold{@ONLINE}, May 2014.
 
 \bibitem{proctor2013cofold}
 Jeff~R Proctor and Irmtraud~M Meyer.
