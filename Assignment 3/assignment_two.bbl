@@ -11,6 +11,11 @@ Mirela Andronescu, Vera Bereg, Holger~H Hoos, and Anne Condon.
   database.
 \newblock {\em BMC bioinformatics}, 9(1):340, 2008.
 
+\bibitem{baiocchi2003gretl}
+Giovanni Baiocchi and Walter Distaso.
+\newblock Gretl: Econometric software for the gnu generation.
+\newblock {\em Journal of Applied Econometrics}, 18(1):105--110, 2003.
+
 \bibitem{do2006contrafold}
 Chuong~B Do, Daniel~A Woods, and Serafim Batzoglou.
 \newblock Contrafold: Rna secondary structure prediction without physics-based
@@ -24,7 +29,9 @@ Fred~Russell Kramer and Donald~R Mills.
 
 \bibitem{lorenz2014online}
 Ronny Lorenz.
-\newblock Viennarna package {@ONLINE}, May 2014.
+\newblock Viennarna package.
+\newblock \url{http://www.tbi.univie.ac.at/~ronny/RNA/index.html}.
+\newblock Accessed: 2014-05-12.
 
 \bibitem{lorenz2011viennarna}
 Ronny Lorenz, Stephan~HF Bernhart, Christian~Hoener Zu~Siederdissen, Hakim
@@ -76,7 +83,9 @@ Joan~U Pontius, James~C Mullikin, Douglas~R Smith, Kerstin Lindblad-Toh, Sante
 
 \bibitem{cofold2014online}
 Jeff Proctor.
-\newblock Cofold{@ONLINE}, May 2014.
+\newblock Cofold webserver.
+\newblock \url{http://www.e-rna.org/cofold/download.cgi}.
+\newblock Accessed: 2014-05-12.
 
 \bibitem{proctor2013cofold}
 Jeff~R Proctor and Irmtraud~M Meyer.

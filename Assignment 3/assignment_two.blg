@@ -7,49 +7,45 @@ Repeated entry---line 532 of file assignment_two.bib
  : @article{do2006contrafold
  :                          ,
 I'm skipping whatever remains of this entry
-Warning--entry type for "lorenz2014online" isn't style-file defined
---line 588 of file assignment_two.bib
-Warning--entry type for "cofold2014online" isn't style-file defined
---line 597 of file assignment_two.bib
-You've used 18 entries,
+You've used 19 entries,
             2118 wiz_defined-function locations,
-            617 strings with 7379 characters,
-and the built_in function-call counts, 6568 in all, are:
-= -- 639
-> -- 350
+            626 strings with 7637 characters,
+and the built_in function-call counts, 6929 in all, are:
+= -- 682
+> -- 363
 < -- 0
-+ -- 141
-- -- 120
-* -- 548
-:= -- 1115
-add.period$ -- 52
-call.type$ -- 18
-change.case$ -- 112
++ -- 146
+- -- 124
+* -- 568
+:= -- 1178
+add.period$ -- 59
+call.type$ -- 19
+change.case$ -- 117
 chr.to.int$ -- 0
-cite$ -- 18
-duplicate$ -- 190
-empty$ -- 484
-format.name$ -- 120
-if$ -- 1309
+cite$ -- 19
+duplicate$ -- 201
+empty$ -- 511
+format.name$ -- 124
+if$ -- 1385
 int.to.chr$ -- 0
-int.to.str$ -- 18
-missing$ -- 16
-newline$ -- 91
-num.names$ -- 36
-pop$ -- 90
+int.to.str$ -- 19
+missing$ -- 17
+newline$ -- 100
+num.names$ -- 38
+pop$ -- 95
 preamble$ -- 1
-purify$ -- 94
+purify$ -- 98
 quote$ -- 0
-skip$ -- 135
+skip$ -- 137
 stack$ -- 0
-substring$ -- 502
-swap$ -- 18
+substring$ -- 532
+swap$ -- 19
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 72
+type$ -- 76
 warning$ -- 0
-while$ -- 65
-width$ -- 20
-write$ -- 194
+while$ -- 69
+width$ -- 21
+write$ -- 211
 (There was 1 error message)

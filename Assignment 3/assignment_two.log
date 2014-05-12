@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.26)  11 MAY 2014 13:05
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.26)  12 MAY 2014 15:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -123,6 +123,10 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
 )
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2012/02/19 v3.2f Customizing captions (AR)
 
@@ -140,18 +144,18 @@ Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
 (./assignment_two.aux)
 \openout1 = `assignment_two.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -225,48 +229,52 @@ Package caption Info: End \AtBeginDocument code.
 <figure4.png, id=14, 1482.53876pt x 677.53125pt>
 File: figure4.png Graphic file (type png)
  <use figure4.png>
-Package pdftex.def Info: figure4.png used on input line 85.
+Package pdftex.def Info: figure4.png used on input line 86.
 (pdftex.def)             Requested size: 1482.53516pt x 677.52959pt.
  [3 <./figure4.png>] [4] [5] <boxplots.pdf, id=28, 361.35pt x 216.81pt>
 File: boxplots.pdf Graphic file (type pdf)
  <use boxplots.pdf>
-Package pdftex.def Info: boxplots.pdf used on input line 135.
+Package pdftex.def Info: boxplots.pdf used on input line 136.
 (pdftex.def)             Requested size: 361.34912pt x 216.80946pt.
 
 <timegraph.pdf, id=29, 361.35pt x 216.81pt>
 File: timegraph.pdf Graphic file (type pdf)
  <use timegraph.pdf>
-Package pdftex.def Info: timegraph.pdf used on input line 187.
+Package pdftex.def Info: timegraph.pdf used on input line 188.
 (pdftex.def)             Requested size: 361.34912pt x 216.80946pt.
- [6 <./boxplots.pdf>] <timegraphsmall.pdf, id=42, 361.35pt x 216.81pt>
+ [6 <./boxplots.pdf>] <timegraphsmall.pdf, id=41, 361.35pt x 216.81pt>
 File: timegraphsmall.pdf Graphic file (type pdf)
 
 <use timegraphsmall.pdf>
-Package pdftex.def Info: timegraphsmall.pdf used on input line 196.
+Package pdftex.def Info: timegraphsmall.pdf used on input line 197.
 (pdftex.def)             Requested size: 361.34912pt x 216.80946pt.
- [7 <./timegraph.pdf>] (./assignment_two.bbl [8 <./timegraphsmall.pdf>] [9]) [1
-0] (./assignment_two.aux) ) 
+ [7] [8 <./timegraph.pdf> <./timegraphsmall.pdf
+
+pdfTeX warning: pdflatex (file ./timegraphsmall.pdf): PDF inclusion: multiple p
+dfs with page group included in a single page
+>] (./assignment_two.bbl [9]) [10] (./assignment_two.aux) ) 
 Here is how much of TeX's memory you used:
- 3149 strings out of 493485
- 47126 string characters out of 3143526
- 108499 words of memory out of 3000000
- 6434 multiletter control sequences out of 15000+200000
- 11728 words of font info for 42 fonts, out of 3000000 for 9000
+ 3226 strings out of 493485
+ 48058 string characters out of 3143526
+ 110588 words of memory out of 3000000
+ 6506 multiletter control sequences out of 15000+200000
+ 11897 words of font info for 43 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,8n,38p,1696b,335s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on assignment_two.pdf (10 pages, 517172 bytes).
+ 38i,8n,38p,1819b,335s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on assignment_two.pdf (10 pages, 523726 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
+ 106 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
