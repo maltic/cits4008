@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.26)  6 MAY 2014 09:32
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.26)  13 MAY 2014 10:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**assignment_two.tex
-(./assignment_two.tex
+**assignment_three.tex
+(./assignment_three.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, et
 hiopic, farsi, arabic, pinyin, croatian, bulgarian, ukrainian, russian, slovak,
@@ -123,6 +123,10 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
 )
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2012/02/19 v3.2f Customizing captions (AR)
 
@@ -137,21 +141,21 @@ Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
 )
 \c@ContinuedFloat=\count100
 )
-(./assignment_two.aux)
-\openout1 = `assignment_two.aux'.
+(./assignment_three.aux)
+\openout1 = `assignment_three.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -219,72 +223,57 @@ Package caption Info: End \AtBeginDocument code.
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./assignment_two.toc)
-\tf@toc=\write3
-\openout3 = `assignment_two.toc'.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
 
-
-(./assignment_two.lof
-Overfull \hbox (3.63344pt too wide) in paragraph at lines 2--2
- \OT1/cmr/m/n/12 state of a sam-ple RNA. Blue lines rep-re-sent bonds be-tween 
-nu-cleotides. 
- []
-
-)
-\tf@lof=\write4
-\openout4 = `assignment_two.lof'.
-
- [2
-
-] <RNAssBasic.pdf, id=14, 279.0425pt x 259.97125pt>
-File: RNAssBasic.pdf Graphic file (type pdf)
- <use RNAssBasic.pdf>
-Package pdftex.def Info: RNAssBasic.pdf used on input line 79.
-(pdftex.def)             Requested size: 279.04181pt x 259.97061pt.
-
-[3
-
-] <RNAss.png, id=19, 3730.93875pt x 1225.57875pt>
-File: RNAss.png Graphic file (type png)
- <use RNAss.png>
-Package pdftex.def Info: RNAss.png used on input line 99.
-(pdftex.def)             Requested size: 3730.9297pt x 1225.57578pt.
- [4 <./RNAssBasic.pdf>] [5 <./RNAss.png>] <figure4.png, id=31, 1482.53876pt x 6
-77.53125pt>
+]
+<figure4.png, id=14, 1482.53876pt x 677.53125pt>
 File: figure4.png Graphic file (type png)
-
-<use figure4.png>
-Package pdftex.def Info: figure4.png used on input line 133.
+ <use figure4.png>
+Package pdftex.def Info: figure4.png used on input line 86.
 (pdftex.def)             Requested size: 1482.53516pt x 677.52959pt.
- [6 <./figure4.png>] <scfg.png, id=38, 1505.625pt x 441.65pt>
-File: scfg.png Graphic file (type png)
+ [3 <./figure4.png>] [4] [5] <boxplots.pdf, id=28, 361.35pt x 216.81pt>
+File: boxplots.pdf Graphic file (type pdf)
+ <use boxplots.pdf>
+Package pdftex.def Info: boxplots.pdf used on input line 136.
+(pdftex.def)             Requested size: 361.34912pt x 216.80946pt.
 
-<use scfg.png>
-Package pdftex.def Info: scfg.png used on input line 158.
-(pdftex.def)             Requested size: 1505.62134pt x 441.64891pt.
- [7] (./assignment_two.bbl [8 <./scfg.png>] [9]) [10]
-(./assignment_two.aux) ) 
+<timegraph.pdf, id=29, 361.35pt x 216.81pt>
+File: timegraph.pdf Graphic file (type pdf)
+ <use timegraph.pdf>
+Package pdftex.def Info: timegraph.pdf used on input line 188.
+(pdftex.def)             Requested size: 361.34912pt x 216.80946pt.
+
+<timegraphsmall.pdf, id=30, 361.35pt x 216.81pt>
+File: timegraphsmall.pdf Graphic file (type pdf)
+ <use timegraphsmall.pdf>
+Package pdftex.def Info: timegraphsmall.pdf used on input line 197.
+(pdftex.def)             Requested size: 361.34912pt x 216.80946pt.
+
+[6 <./boxplots.pdf>] [7 <./timegraph.pdf>] [8 <./timegraphsmall.pdf>]
+(./assignment_three.bbl [9]) [10] (./assignment_three.aux) ) 
 Here is how much of TeX's memory you used:
- 3144 strings out of 493485
- 46960 string characters out of 3143526
- 109460 words of memory out of 3000000
- 6423 multiletter control sequences out of 15000+200000
- 10888 words of font info for 39 fonts, out of 3000000 for 9000
+ 3228 strings out of 493485
+ 48104 string characters out of 3143526
+ 111588 words of memory out of 3000000
+ 6507 multiletter control sequences out of 15000+200000
+ 12065 words of font info for 44 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,6n,38p,1348b,296s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
-2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on assignment_two.pdf (10 pages, 846486 bytes).
+ 38i,8n,38p,1821b,335s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on assignment_three.pdf (10 pages, 532685 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
+ 111 PDF objects out of 1000 (max. 8388607)
+ 76 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
