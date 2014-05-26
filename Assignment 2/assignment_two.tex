@@ -50,7 +50,7 @@ The University of Western Australia}
 \maketitle
 
 \begin{abstract}
-The algorithmic prediction of RNA molecules dates back to the late 1970s. Despite the field's age, little progress has been made. There are two core approaches for in silico RNA folding: ad-hoc dynamic programming algorithms, and stochastic context free grammar parsing methods. Both converge on the same accuracy upper limit, despite often using wildly different scoring schemes. In this report I outline these core algorithmic approaches for folding RNA. Furthermore, I highlight the lack of progress in prediction accuracy. Finally, I attempt to explain why the predictive power of these algorithms is stunted, and suggest a direction for future research.
+The algorithmic prediction of RNA molecules dates back to the late 1970s. Despite the field's age, little progress has been made. There are two dominant approaches for in silico RNA folding: ad-hoc dynamic programming algorithms, and stochastic context free grammar parsing methods. Both converge on the same accuracy upper limit, despite often using wildly different scoring schemes. In this report I outline these core algorithmic approaches for folding RNA. Furthermore, I highlight the lack of progress in prediction accuracy. Finally, I attempt to explain why the predictive power of these algorithms is stunted, and suggest a direction for future research.
 \end{abstract}
 
 
@@ -60,14 +60,14 @@ The algorithmic prediction of RNA molecules dates back to the late 1970s. Despit
 
 \clearpage
 
-\tableofcontents
-\listoffigures
-\clearpage
+%\tableofcontents
+%\listoffigures
+%\clearpage
 
-\section{Introduction}
+\section{Introduction \& Background}
 This report outlines the algorithmic prediction of Ribonucleic Acid (RNA) structures. An overview of the essential techniques is given. In particular, the lack of significant progress is stressed, and possible explanations are explored. However, we must first understand what RNA is, and how they fold. RNA molecules fold much like paper aeroplanes. To understand this, the reader must also understand the chemistry of RNA, which is straightforward, and for which I shall now describe a working model.
 
-\section{RNA and Aeroplanes} 
+\subsection{RNA and Aeroplanes} 
 As the name implies, RNA is chemically similar to Deoxyribonucleic Acid (DNA). However, unlike DNA, RNA is single stranded. This means that it is made of a single sequence of connected nucleotides. These nucleotides are like links in a chain. Each such nucleotide is attached to its direct neighbours in the sequence. Much like an actual chain, a complete RNA sequence is flexible, and can move about freely. While the nucleotides I have mentioned are chemically ingenious, we need not know the details. All that need be said here is that there are four types: Adenine (often abbreviated to A), Guanine (G), Cytosine (C), and Uracil (U). Adenine readily forms chemical bonds with Uracil, and vice-versa. Similarly, Guanine and Cytosine have a propensity to bond. Additionally, Guanine and Uracil sometimes form weak bonds. In the parlance of RNA research, these types of bonds are called `A-U', `G-C', and `G-U' respectively.
 
 
