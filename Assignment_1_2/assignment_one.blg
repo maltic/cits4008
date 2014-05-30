@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2012/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: assignment_one.aux
+The style file: plain.bst
+Database file #1: assignment_one.bib
+Repeated entry---line 532 of file assignment_one.bib
+ : @article{do2006contrafold
+ :                          ,
+I'm skipping whatever remains of this entry
+You've used 19 entries,
+            2118 wiz_defined-function locations,
+            626 strings with 7637 characters,
+and the built_in function-call counts, 6929 in all, are:
+= -- 682
+> -- 363
+< -- 0
++ -- 146
+- -- 124
+* -- 568
+:= -- 1178
+add.period$ -- 59
+call.type$ -- 19
+change.case$ -- 117
+chr.to.int$ -- 0
+cite$ -- 19
+duplicate$ -- 201
+empty$ -- 511
+format.name$ -- 124
+if$ -- 1385
+int.to.chr$ -- 0
+int.to.str$ -- 19
+missing$ -- 17
+newline$ -- 100
+num.names$ -- 38
+pop$ -- 95
+preamble$ -- 1
+purify$ -- 98
+quote$ -- 0
+skip$ -- 137
+stack$ -- 0
+substring$ -- 532
+swap$ -- 19
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 76
+warning$ -- 0
+while$ -- 69
+width$ -- 21
+write$ -- 211
+(There was 1 error message)
