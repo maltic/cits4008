@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.26)  30 MAY 2014 15:05
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.26)  31 MAY 2014 11:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -237,20 +237,27 @@ File: figure4.png Graphic file (type png)
  <use figure4.png>
 Package pdftex.def Info: figure4.png used on input line 79.
 (pdftex.def)             Requested size: 1482.53516pt x 677.52959pt.
- [3 <./figure4.png>] [4] [5] (./assignment_one.bbl [6]) [7] (./assignment_one.a
-ux)
+ [3 <./figure4.png>]
+
+LaTeX Warning: Reference `myass' on page 4 undefined on input line 106.
+
+[4]
+
+LaTeX Warning: Reference `dfg' on page 5 undefined on input line 113.
+
+(./assignment_one.bbl [5] [6]) [7] (./assignment_one.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3203 strings out of 493485
- 47650 string characters out of 3143526
+ 3205 strings out of 493485
+ 47662 string characters out of 3143526
  109521 words of memory out of 3000000
- 6485 multiletter control sequences out of 15000+200000
+ 6487 multiletter control sequences out of 15000+200000
  11393 words of font info for 42 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,8n,38p,1494b,296s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,8n,38p,1428b,296s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
@@ -261,7 +268,7 @@ type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmtt12.pfb>
-Output written on assignment_one.pdf (7 pages, 441770 bytes).
+Output written on assignment_one.pdf (7 pages, 441474 bytes).
 PDF statistics:
  71 PDF objects out of 1000 (max. 8388607)
  49 compressed objects within 1 object stream
