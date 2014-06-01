@@ -1,114 +1,35 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{1}
 
-\bibitem{amaral2008eukaryotic}
-Paulo~P Amaral, Marcel~E Dinger, Tim~R Mercer, and John~S Mattick.
-\newblock The eukaryotic genome as an rna machine.
-\newblock {\em Science}, 319(5871):1787--1789, 2008.
+\bibitem{cong1990over}
+Jason Cong and CL~Liu.
+\newblock Over-the-cell channel routing.
+\newblock {\em Computer-Aided Design of Integrated Circuits and Systems, IEEE
+  Transactions on}, 9(4):408--418, 1990.
 
-\bibitem{andronescu2008rna}
-Mirela Andronescu, Vera Bereg, Holger~H Hoos, and Anne Condon.
-\newblock Rna strand: the rna secondary structure and statistical analysis
-  database.
-\newblock {\em BMC bioinformatics}, 9(1):340, 2008.
-
-\bibitem{baiocchi2003gretl}
-Giovanni Baiocchi and Walter Distaso.
-\newblock Gretl: Econometric software for the gnu generation.
-\newblock {\em Journal of Applied Econometrics}, 18(1):105--110, 2003.
-
-\bibitem{do2006contrafold}
-Chuong~B Do, Daniel~A Woods, and Serafim Batzoglou.
-\newblock Contrafold: Rna secondary structure prediction without physics-based
-  models.
-\newblock {\em Bioinformatics}, 22(14):e90--e98, 2006.
-
-\bibitem{kramer1981secondary}
-Fred~Russell Kramer and Donald~R Mills.
-\newblock Secondary structure formation during rna synthesis.
-\newblock {\em Nucleic acids research}, 9(19):5109--5124, 1981.
-
-\bibitem{lorenz2014online}
-Ronny Lorenz.
-\newblock Viennarna package.
-\newblock \url{http://www.tbi.univie.ac.at/~ronny/RNA/index.html}.
-\newblock Accessed: 2014-05-12.
-
-\bibitem{lorenz2011viennarna}
-Ronny Lorenz, Stephan~HF Bernhart, Christian~Hoener Zu~Siederdissen, Hakim
-  Tafer, Christoph Flamm, Peter~F Stadler, Ivo~L Hofacker, et~al.
-\newblock Viennarna package 2.0.
-\newblock {\em Algorithms for Molecular Biology}, 6(1):26, 2011.
-
-\bibitem{makeyev2008multilevel}
-Eugene~V Makeyev and Tom Maniatis.
-\newblock Multilevel regulation of gene expression by micrornas.
-\newblock {\em Science}, 319(5871):1789--1790, 2008.
-
-\bibitem{mathews2004incorporating}
-David~H Mathews, Matthew~D Disney, Jessica~L Childs, Susan~J Schroeder, Michael
-  Zuker, and Douglas~H Turner.
-\newblock Incorporating chemical modification constraints into a dynamic
-  programming algorithm for prediction of rna secondary structure.
-\newblock {\em Proceedings of the National Academy of Sciences of the United
-  States of America}, 101(19):7287--7292, 2004.
-
-\bibitem{mathews1999expanded}
-David~H Mathews, Jeffrey Sabina, Michael Zuker, and Douglas~H Turner.
-\newblock Expanded sequence dependence of thermodynamic parameters improves
-  prediction of rna secondary structure.
-\newblock {\em Journal of molecular biology}, 288(5):911--940, 1999.
+\bibitem{de1999graph}
+Dominique de~Werra, Ch~Eisenbeis, Sylvain Lelait, and Bruno Marmol.
+\newblock On a graph-theoretical model for cyclic register allocation.
+\newblock {\em Discrete Applied Mathematics}, 93(2):191--203, 1999.
 
 \bibitem{mattick2007new}
 John~S Mattick.
 \newblock A new paradigm for developmental biology.
 \newblock {\em Journal of Experimental Biology}, 210(9):1526--1547, 2007.
 
-\bibitem{mccaskill1990equilibrium}
-John~S McCaskill.
-\newblock The equilibrium partition function and base pair binding
-  probabilities for rna secondary structure.
-\newblock {\em Biopolymers}, 29(6-7):1105--1119, 1990.
+\bibitem{nussinov1978algorithms}
+Ruth Nussinov, George Pieczenik, Jerrold~R Griggs, and Daniel~J Kleitman.
+\newblock Algorithms for loop matchings.
+\newblock {\em SIAM Journal on Applied mathematics}, 35(1):68--82, 1978.
 
-\bibitem{morgan1996evidence}
-Steven~R Morgan and Paul~G Higgs.
-\newblock Evidence for kinetic effects in the folding of large rna molecules.
-\newblock {\em The Journal of chemical physics}, 105(16):7152--7157, 1996.
+\bibitem{swenson2009maximum}
+Krister~M Swenson, Yokuki To, Jijun Tang, and Bernard~ME Moret.
+\newblock Maximum independent sets of commuting and noninterfering inversions.
+\newblock {\em BMC bioinformatics}, 10(Suppl 1):S6, 2009.
 
-\bibitem{pontius2007initial}
-Joan~U Pontius, James~C Mullikin, Douglas~R Smith, Kerstin Lindblad-Toh, Sante
-  Gnerre, Michele Clamp, Jean Chang, Robert Stephens, Beena Neelam, Natalia
-  Volfovsky, et~al.
-\newblock Initial sequence and comparative analysis of the cat genome.
-\newblock {\em Genome research}, 17(11):1675--1689, 2007.
-
-\bibitem{cofold2014online}
-Jeff Proctor.
-\newblock Cofold webserver.
-\newblock \url{http://www.e-rna.org/cofold/download.cgi}.
-\newblock Accessed: 2014-05-12.
-
-\bibitem{proctor2013cofold}
-Jeff~R Proctor and Irmtraud~M Meyer.
-\newblock Cofold: an rna secondary structure prediction method that takes
-  co-transcriptional folding into account.
-\newblock {\em Nucleic acids research}, 41(9):e102--e102, 2013.
-
-\bibitem{reuter2010rnastructure}
-Jessica~S Reuter and David~H Mathews.
-\newblock Rnastructure: software for rna secondary structure prediction and
-  analysis.
-\newblock {\em BMC bioinformatics}, 11(1):129, 2010.
-
-\bibitem{studnicka1978computer}
-Gary~M Studnicka, Georgia~M Rahn, Ian~W Cummings, and Winston~A Salser.
-\newblock Computer method for predicting the secondary structure of
-  single-stranded rna.
-\newblock {\em Nucleic acids research}, 5(9):3365--3388, 1978.
-
-\bibitem{zuker1981optimal}
-Michael Zuker and Patrick Stiegler.
-\newblock Optimal computer folding of large rna sequences using thermodynamics
-  and auxiliary information.
-\newblock {\em Nucleic acids research}, 9(1):133--148, 1981.
+\bibitem{valiente2003new}
+Gabriel Valiente.
+\newblock A new simple algorithm for the maximum-weight independent set problem
+  on circle graphs.
+\newblock In {\em Algorithms and Computation}, pages 129--137. Springer, 2003.
 
 \end{thebibliography}
