@@ -11,6 +11,12 @@ Dominique de~Werra, Ch~Eisenbeis, Sylvain Lelait, and Bruno Marmol.
 \newblock On a graph-theoretical model for cyclic register allocation.
 \newblock {\em Discrete Applied Mathematics}, 93(2):191--203, 1999.
 
+\bibitem{gavril1973algorithms}
+Fanica Gavril.
+\newblock Algorithms for a maximum clique and a maximum independent set of a
+  circle graph.
+\newblock {\em Networks}, 3(3):261--273, 1973.
+
 \bibitem{mattick2007new}
 John~S Mattick.
 \newblock A new paradigm for developmental biology.
